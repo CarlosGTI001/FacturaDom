@@ -29,6 +29,9 @@ namespace FacturaDom.BDO.Vistas
         {
             eliminarFactura.TileImage = IconChar.Trash.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
             nuevaFactura.TileImage = IconChar.FileCirclePlus.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
+            agregarArticulo.TileImage = IconChar.Add.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
+            imprimirFactura.TileImage = IconChar.Print.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
+            buscarArticulo.TileImage = IconChar.Search.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
 
             facturarPanel.Hide();
             clientePanel.Hide();
@@ -37,11 +40,12 @@ namespace FacturaDom.BDO.Vistas
         }
         public Cliente cliente;
         facturaController facturaController = new facturaController();
-        public Modelos.Factura factura; 
+        public Modelos.Factura factura;
         private void nuevaFactura_Click(object sender, EventArgs e)
         {
             ElegirCliente elegirCliente = new ElegirCliente(this);
-            if(elegirCliente.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(clienteCedula)) {
+            if (elegirCliente.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(clienteCedula))
+            {
                 facturarPanel.Show();
                 clientePanel.Show();
                 productosPanel.Show();
@@ -62,7 +66,7 @@ namespace FacturaDom.BDO.Vistas
                 DBDataContext.Instance.SaveChanges();
                 eliminarFactura.Show();
             }
-            
+
         }
 
         private void facturaBox_Click(object sender, EventArgs e)
@@ -82,7 +86,20 @@ namespace FacturaDom.BDO.Vistas
             cliente = null;
             codigoLbl.Text = "-";
             direccionLbl.Text = "-";
+            facturaBox.Show();
+        }
 
+        private void agregarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+        public Modelos.Articulo articulo;
+        private void buscarArticulo_Click(object sender, EventArgs e)
+        {
+            ElegirArticulo elegirArticulo = new ElegirArticulo(this);
+            if(elegirArticulo.ShowDialog() == DialogResult.OK) {
+                
+            }
         }
     }
 }
