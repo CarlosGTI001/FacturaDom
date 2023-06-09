@@ -27,7 +27,9 @@ namespace FacturaDom.BDO.Vistas
 
         private void Factura_Load(object sender, EventArgs e)
         {
-            eliminarFactura.TileImage = IconChar.Remove.ToBitmap(Color.White, 64, 0, FlipOrientation.Normal);
+            eliminarFactura.TileImage = IconChar.Trash.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
+            nuevaFactura.TileImage = IconChar.FileCirclePlus.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
+
             facturarPanel.Hide();
             clientePanel.Hide();
             productosPanel.Hide();
@@ -57,6 +59,7 @@ namespace FacturaDom.BDO.Vistas
                     UserName = UserSession.Instance.UserName
                 };
                 DBDataContext.Instance.Factura.Add(factura);
+                DBDataContext.Instance.SaveChanges();
                 eliminarFactura.Show();
             }
             
@@ -64,6 +67,21 @@ namespace FacturaDom.BDO.Vistas
 
         private void facturaBox_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void eliminarFactura_Click(object sender, EventArgs e)
+        {
+            DBDataContext.Instance.Factura.Remove(factura);
+            DBDataContext.Instance.SaveChanges();
+            facturarPanel.Hide();
+            clientePanel.Hide();
+            productosPanel.Hide();
+            eliminarFactura.Hide();
+            clienteLbl.Text = "-";
+            cliente = null;
+            codigoLbl.Text = "-";
+            direccionLbl.Text = "-";
 
         }
     }

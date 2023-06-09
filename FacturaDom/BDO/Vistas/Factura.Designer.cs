@@ -480,6 +480,7 @@
             this.eliminarFactura.UseSelectable = true;
             this.eliminarFactura.UseTileImage = true;
             this.eliminarFactura.UseVisualStyleBackColor = false;
+            this.eliminarFactura.Click += new System.EventHandler(this.eliminarFactura_Click);
             // 
             // clientePanel
             // 
