@@ -19,6 +19,7 @@ namespace FacturaDom.BDO.Vistas
     {
         public string clienteCedula;
         clienteController clienteController = new clienteController();
+
         public Factura()
         {
             InitializeComponent();
@@ -32,15 +33,17 @@ namespace FacturaDom.BDO.Vistas
             agregarArticulo.TileImage = IconChar.Add.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
             imprimirFactura.TileImage = IconChar.Print.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
             buscarArticulo.TileImage = IconChar.Search.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
-
             facturarPanel.Hide();
             clientePanel.Hide();
             productosPanel.Hide();
             eliminarFactura.Hide();
+            detalleGrid.DataSource = detalleFacturaBindingSource;
         }
+
         public Cliente cliente;
         facturaController facturaController = new facturaController();
         public Modelos.Factura factura;
+
         private void nuevaFactura_Click(object sender, EventArgs e)
         {
             ElegirCliente elegirCliente = new ElegirCliente(this);
@@ -91,15 +94,67 @@ namespace FacturaDom.BDO.Vistas
 
         private void agregarArticulo_Click(object sender, EventArgs e)
         {
+            detalle.Add(new DetalleFactura
+            {
+                Codigo = "DET" + articulo.Codigo + detalle.Count() + DateTime.Now.ToString("ddMMyymmss"),
+                Nombre = articulo.Nombre,
+                Descripcion = articulo.Descripcion,
+                Precio = articulo.Precio,
+                TipoMedida = articulo.TipoMedida,
+                Cantidad = decimal.Parse(cantidadArticulo.Text),
+                Total = decimal.Parse(totalLbl.Text.Replace("RD$", ""))
+            });
 
+            totalRds.Text = "RD$" + detalle.Sum(a => a.Total);
+            articulosCantidad.Text = detalle.Count().ToString();
+            detalleGrid.DataSource = detalle;
+            quitar();
         }
+
+        public List<Modelos.DetalleFactura> detalle = new List<DetalleFactura>();
         public Modelos.Articulo articulo;
+
+
+
         private void buscarArticulo_Click(object sender, EventArgs e)
         {
             ElegirArticulo elegirArticulo = new ElegirArticulo(this);
-            if(elegirArticulo.ShowDialog() == DialogResult.OK) {
-                
+
+            if (elegirArticulo.ShowDialog() == DialogResult.OK)
+            {
+                articuloNombre.Text = articulo.Nombre;
+                precioLbl.Text = "RD$" + articulo.Precio;
+                totalLbl.Text = "RD$" + 0;
+                agregarArticulo.Enabled = true;
             }
+        }
+
+        private void cantidadArticulo_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(cantidadArticulo.Text, out decimal result))
+            {
+                totalLbl.Text = "RD$" + (result * articulo.Precio);
+            }
+        }
+
+        private void quitarArticulo_Click(object sender, EventArgs e)
+        {
+            quitar();
+        }
+
+        public void quitar()
+        {
+            agregarArticulo.Enabled = false;
+            articuloNombre.Text = "-";
+            precioLbl.Text = "RD$" + "-";
+            totalLbl.Text = "RD$" + "-";
+            articulosCantidad.Text = "0";
+            articulo = null;
+        }
+
+        private void facturarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

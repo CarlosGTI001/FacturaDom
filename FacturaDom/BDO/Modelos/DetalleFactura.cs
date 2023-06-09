@@ -13,7 +13,7 @@ namespace FacturaDom.BDO.Modelos
     {
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
-        public decimal Precio { get; set; }
+        public new decimal Precio { get; set; }
 
         public decimal Cantidad { get; set; }
         public string TipoMedida { get; set; }

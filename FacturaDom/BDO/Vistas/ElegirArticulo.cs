@@ -23,6 +23,8 @@ namespace FacturaDom.BDO.Vistas
             InitializeComponent();
         }
         Articulo Articulo = new Articulo();
+        internal string Busqueda;
+
         private void ElegirArticulo_Load(object sender, EventArgs e)
         {
             articuloGrid.DataSource = articulosController.obtenerArticulos().Where(a => a.Stock > 0).ToList();
@@ -36,6 +38,24 @@ namespace FacturaDom.BDO.Vistas
                 .Cells[0]
                 .Value
                 .ToString())).FirstOrDefault();
+        }
+
+        private void elegir_Articulo_Click(object sender, EventArgs e)
+        {
+            Factura.articulo = Articulo;
+            DialogResult = DialogResult.OK;
+        }
+
+        private void busquedaText_TextChanged(object sender, EventArgs e)
+        {
+            articuloGrid.DataSource = articulosController
+                .obtenerArticulos()
+                .Where(a => a.Stock > 0)
+                .Where(a=>a.Codigo
+                .Contains(busquedaText.Text) || a.Nombre
+                .Contains(busquedaText.Text))
+                .ToList();
+
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var borde = System.Windows.Forms.BorderStyle.None; ;
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -48,7 +47,9 @@
             totalDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             descripcionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             detalleFacturaBindingSource = new BindingSource(components);
+            imprimirFactura = new MetroFramework.Controls.MetroTile();
             productosPanel = new MetroFramework.Controls.MetroPanel();
+            quitarArticulo = new MetroFramework.Controls.MetroButton();
             totalLbl = new MetroFramework.Controls.MetroLabel();
             precioLbl = new MetroFramework.Controls.MetroLabel();
             metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -58,10 +59,7 @@
             agregarArticulo = new MetroFramework.Controls.MetroTile();
             metroLabel4 = new MetroFramework.Controls.MetroLabel();
             cantidadArticulo = new TextBox();
-            metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            busquedaText = new TextBox();
             buscarArticulo = new MetroFramework.Controls.MetroTile();
-            imprimirFactura = new MetroFramework.Controls.MetroTile();
             articuloBindingSource = new BindingSource(components);
             nuevaFactura = new MetroFramework.Controls.MetroTile();
             eliminarFactura = new MetroFramework.Controls.MetroTile();
@@ -89,23 +87,25 @@
             facturarPanel.Controls.Add(totalRds);
             facturarPanel.Controls.Add(metroLabel1);
             facturarPanel.Controls.Add(detalleGrid);
+            facturarPanel.Controls.Add(imprimirFactura);
             facturarPanel.HorizontalScrollbarBarColor = true;
             facturarPanel.HorizontalScrollbarHighlightOnWheel = false;
             facturarPanel.HorizontalScrollbarSize = 10;
             facturarPanel.Location = new Point(26, 206);
             facturarPanel.Name = "facturarPanel";
-            facturarPanel.Size = new Size(486, 348);
+            facturarPanel.Size = new Size(552, 348);
             facturarPanel.TabIndex = 0;
             facturarPanel.VerticalScrollbarBarColor = true;
             facturarPanel.VerticalScrollbarHighlightOnWheel = false;
             facturarPanel.VerticalScrollbarSize = 10;
+            facturarPanel.Paint += facturarPanel_Paint;
             // 
             // articulosCantidad
             // 
             articulosCantidad.AutoSize = true;
             articulosCantidad.FontSize = MetroFramework.MetroLabelSize.Tall;
             articulosCantidad.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            articulosCantidad.Location = new Point(323, 280);
+            articulosCantidad.Location = new Point(385, 280);
             articulosCantidad.Name = "articulosCantidad";
             articulosCantidad.Size = new Size(22, 25);
             articulosCantidad.TabIndex = 6;
@@ -116,7 +116,7 @@
             metroLabel2.AutoSize = true;
             metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel2.Location = new Point(223, 280);
+            metroLabel2.Location = new Point(285, 280);
             metroLabel2.Name = "metroLabel2";
             metroLabel2.Size = new Size(94, 25);
             metroLabel2.TabIndex = 5;
@@ -127,7 +127,7 @@
             totalRds.AutoSize = true;
             totalRds.FontSize = MetroFramework.MetroLabelSize.Tall;
             totalRds.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            totalRds.Location = new Point(323, 305);
+            totalRds.Location = new Point(385, 305);
             totalRds.Name = "totalRds";
             totalRds.Size = new Size(47, 25);
             totalRds.TabIndex = 4;
@@ -138,7 +138,7 @@
             metroLabel1.AutoSize = true;
             metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel1.Location = new Point(258, 305);
+            metroLabel1.Location = new Point(320, 305);
             metroLabel1.Name = "metroLabel1";
             metroLabel1.Size = new Size(59, 25);
             metroLabel1.TabIndex = 3;
@@ -193,7 +193,7 @@
             detalleGrid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             detalleGrid.RowTemplate.Height = 25;
             detalleGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            detalleGrid.Size = new Size(486, 266);
+            detalleGrid.Size = new Size(552, 266);
             detalleGrid.TabIndex = 2;
             detalleGrid.UseStyleColors = true;
             // 
@@ -260,10 +260,25 @@
             // 
             detalleFacturaBindingSource.DataSource = typeof(Modelos.DetalleFactura);
             // 
+            // imprimirFactura
+            // 
+            imprimirFactura.ActiveControl = null;
+            imprimirFactura.BackColor = Color.SteelBlue;
+            imprimirFactura.Location = new Point(19, 280);
+            imprimirFactura.Name = "imprimirFactura";
+            imprimirFactura.Size = new Size(114, 57);
+            imprimirFactura.TabIndex = 5;
+            imprimirFactura.Text = "Imprimir \r\nFactura";
+            imprimirFactura.TileImageAlign = ContentAlignment.MiddleRight;
+            imprimirFactura.UseCustomBackColor = true;
+            imprimirFactura.UseSelectable = true;
+            imprimirFactura.UseTileImage = true;
+            imprimirFactura.UseVisualStyleBackColor = false;
+            // 
             // productosPanel
             // 
             productosPanel.BackColor = Color.White;
-            productosPanel.BorderStyle = borde;
+            productosPanel.Controls.Add(quitarArticulo);
             productosPanel.Controls.Add(totalLbl);
             productosPanel.Controls.Add(precioLbl);
             productosPanel.Controls.Add(metroLabel8);
@@ -273,27 +288,40 @@
             productosPanel.Controls.Add(agregarArticulo);
             productosPanel.Controls.Add(metroLabel4);
             productosPanel.Controls.Add(cantidadArticulo);
-            productosPanel.Controls.Add(metroLabel3);
-            productosPanel.Controls.Add(busquedaText);
             productosPanel.Controls.Add(buscarArticulo);
-            productosPanel.Controls.Add(imprimirFactura);
             productosPanel.HorizontalScrollbarBarColor = true;
             productosPanel.HorizontalScrollbarHighlightOnWheel = false;
             productosPanel.HorizontalScrollbarSize = 10;
-            productosPanel.Location = new Point(518, 207);
+            productosPanel.Location = new Point(584, 206);
             productosPanel.Name = "productosPanel";
-            productosPanel.Size = new Size(360, 347);
+            productosPanel.Size = new Size(294, 348);
             productosPanel.TabIndex = 1;
             productosPanel.UseCustomBackColor = true;
             productosPanel.VerticalScrollbarBarColor = true;
             productosPanel.VerticalScrollbarHighlightOnWheel = false;
             productosPanel.VerticalScrollbarSize = 10;
             // 
+            // quitarArticulo
+            // 
+            quitarArticulo.BackColor = Color.Red;
+            quitarArticulo.ForeColor = SystemColors.ControlLightLight;
+            quitarArticulo.Location = new Point(223, 138);
+            quitarArticulo.Name = "quitarArticulo";
+            quitarArticulo.Size = new Size(29, 29);
+            quitarArticulo.TabIndex = 16;
+            quitarArticulo.Text = "X";
+            quitarArticulo.UseCompatibleTextRendering = true;
+            quitarArticulo.UseCustomBackColor = true;
+            quitarArticulo.UseCustomForeColor = true;
+            quitarArticulo.UseSelectable = true;
+            quitarArticulo.UseVisualStyleBackColor = false;
+            quitarArticulo.Click += quitarArticulo_Click;
+            // 
             // totalLbl
             // 
             totalLbl.AutoSize = true;
             totalLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            totalLbl.Location = new Point(150, 231);
+            totalLbl.Location = new Point(91, 174);
             totalLbl.Name = "totalLbl";
             totalLbl.Size = new Size(43, 19);
             totalLbl.TabIndex = 15;
@@ -304,7 +332,7 @@
             // 
             precioLbl.AutoSize = true;
             precioLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            precioLbl.Location = new Point(150, 131);
+            precioLbl.Location = new Point(101, 89);
             precioLbl.Name = "precioLbl";
             precioLbl.Size = new Size(43, 19);
             precioLbl.TabIndex = 14;
@@ -315,7 +343,7 @@
             // 
             metroLabel8.AutoSize = true;
             metroLabel8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel8.Location = new Point(105, 231);
+            metroLabel8.Location = new Point(46, 174);
             metroLabel8.Name = "metroLabel8";
             metroLabel8.Size = new Size(39, 19);
             metroLabel8.TabIndex = 13;
@@ -326,7 +354,7 @@
             // 
             metroLabel7.AutoSize = true;
             metroLabel7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel7.Location = new Point(95, 131);
+            metroLabel7.Location = new Point(46, 89);
             metroLabel7.Name = "metroLabel7";
             metroLabel7.Size = new Size(49, 19);
             metroLabel7.TabIndex = 12;
@@ -337,7 +365,7 @@
             // 
             articuloNombre.AutoSize = true;
             articuloNombre.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            articuloNombre.Location = new Point(150, 105);
+            articuloNombre.Location = new Point(101, 63);
             articuloNombre.Name = "articuloNombre";
             articuloNombre.Size = new Size(15, 19);
             articuloNombre.TabIndex = 11;
@@ -348,7 +376,7 @@
             // 
             metroLabel5.AutoSize = true;
             metroLabel5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel5.Location = new Point(86, 105);
+            metroLabel5.Location = new Point(37, 63);
             metroLabel5.Name = "metroLabel5";
             metroLabel5.Size = new Size(58, 19);
             metroLabel5.TabIndex = 10;
@@ -359,7 +387,8 @@
             // 
             agregarArticulo.ActiveControl = null;
             agregarArticulo.BackColor = Color.SteelBlue;
-            agregarArticulo.Location = new Point(27, 268);
+            agregarArticulo.Enabled = false;
+            agregarArticulo.Location = new Point(157, 227);
             agregarArticulo.Name = "agregarArticulo";
             agregarArticulo.Size = new Size(114, 59);
             agregarArticulo.TabIndex = 5;
@@ -375,7 +404,7 @@
             // 
             metroLabel4.AutoSize = true;
             metroLabel4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel4.Location = new Point(86, 156);
+            metroLabel4.Location = new Point(37, 114);
             metroLabel4.Name = "metroLabel4";
             metroLabel4.Size = new Size(62, 19);
             metroLabel4.TabIndex = 9;
@@ -385,36 +414,18 @@
             // cantidadArticulo
             // 
             cantidadArticulo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cantidadArticulo.Location = new Point(86, 180);
+            cantidadArticulo.Location = new Point(37, 138);
             cantidadArticulo.Name = "cantidadArticulo";
             cantidadArticulo.Size = new Size(180, 33);
             cantidadArticulo.TabIndex = 8;
             cantidadArticulo.Text = "0";
-            // 
-            // metroLabel3
-            // 
-            metroLabel3.AutoSize = true;
-            metroLabel3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel3.Location = new Point(19, 25);
-            metroLabel3.Name = "metroLabel3";
-            metroLabel3.Size = new Size(66, 19);
-            metroLabel3.TabIndex = 7;
-            metroLabel3.Text = "Busqueda";
-            metroLabel3.UseCustomBackColor = true;
-            // 
-            // busquedaText
-            // 
-            busquedaText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            busquedaText.Location = new Point(19, 51);
-            busquedaText.Name = "busquedaText";
-            busquedaText.Size = new Size(180, 33);
-            busquedaText.TabIndex = 6;
+            cantidadArticulo.TextChanged += cantidadArticulo_TextChanged;
             // 
             // buscarArticulo
             // 
             buscarArticulo.ActiveControl = null;
             buscarArticulo.BackColor = Color.SteelBlue;
-            buscarArticulo.Location = new Point(227, 25);
+            buscarArticulo.Location = new Point(37, 227);
             buscarArticulo.Name = "buscarArticulo";
             buscarArticulo.Size = new Size(114, 59);
             buscarArticulo.TabIndex = 4;
@@ -425,21 +436,6 @@
             buscarArticulo.UseTileImage = true;
             buscarArticulo.UseVisualStyleBackColor = false;
             buscarArticulo.Click += buscarArticulo_Click;
-            // 
-            // imprimirFactura
-            // 
-            imprimirFactura.ActiveControl = null;
-            imprimirFactura.BackColor = Color.SteelBlue;
-            imprimirFactura.Location = new Point(227, 270);
-            imprimirFactura.Name = "imprimirFactura";
-            imprimirFactura.Size = new Size(114, 57);
-            imprimirFactura.TabIndex = 5;
-            imprimirFactura.Text = "Imprimir \r\nFactura";
-            imprimirFactura.TileImageAlign = ContentAlignment.MiddleRight;
-            imprimirFactura.UseCustomBackColor = true;
-            imprimirFactura.UseSelectable = true;
-            imprimirFactura.UseTileImage = true;
-            imprimirFactura.UseVisualStyleBackColor = false;
             // 
             // articuloBindingSource
             // 
@@ -480,7 +476,6 @@
             // clientePanel
             // 
             clientePanel.BackColor = Color.White;
-            clientePanel.BorderStyle = borde;
             clientePanel.Controls.Add(direccionLbl);
             clientePanel.Controls.Add(clienteLbl);
             clientePanel.Controls.Add(codigoLbl);
@@ -636,7 +631,6 @@
         private MetroFramework.Controls.MetroTile imprimirFactura;
         private MetroFramework.Controls.MetroTile eliminarFactura;
         private MetroFramework.Controls.MetroTile buscarArticulo;
-        private TextBox busquedaText;
         private MetroFramework.Controls.MetroLabel totalLbl;
         private MetroFramework.Controls.MetroLabel precioLbl;
         private MetroFramework.Controls.MetroLabel metroLabel8;
@@ -646,7 +640,6 @@
         private MetroFramework.Controls.MetroTile agregarArticulo;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private TextBox cantidadArticulo;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroPanel clientePanel;
         private MetroFramework.Controls.MetroLabel direccionLbl;
         private MetroFramework.Controls.MetroLabel clienteLbl;
@@ -655,5 +648,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private FontAwesome.Sharp.IconPictureBox facturaBox;
+        private MetroFramework.Controls.MetroButton quitarArticulo;
     }
 }

@@ -59,7 +59,7 @@
             articuloGrid.AutoGenerateColumns = false;
             articuloGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             articuloGrid.BackgroundColor = Color.FromArgb(255, 255, 255);
-            articuloGrid.BorderStyle = BorderStyle.Fixed3D;
+            articuloGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             articuloGrid.CellBorderStyle = DataGridViewCellBorderStyle.None;
             articuloGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -171,6 +171,7 @@
             busquedaText.Name = "busquedaText";
             busquedaText.Size = new Size(180, 33);
             busquedaText.TabIndex = 8;
+            busquedaText.TextChanged += busquedaText_TextChanged;
             // 
             // elegir_Articulo
             // 
@@ -186,6 +187,7 @@
             elegir_Articulo.UseSelectable = true;
             elegir_Articulo.UseTileImage = true;
             elegir_Articulo.UseVisualStyleBackColor = false;
+            elegir_Articulo.Click += elegir_Articulo_Click;
             // 
             // articuloBindingSource
             // 
