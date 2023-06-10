@@ -27,6 +27,7 @@ namespace FacturaDom.BDO.Vistas
             articuloNombre.Text = articulo.Nombre;
             precioLbl.Text = "RD$" + articulo.Precio;
             totalLbl.Text = "RD$" + 0;
+            cantidadArticulo.Text = articulo.Cantidad.ToString();
             retirarArticulo.TileImage = IconChar.Trash.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
             cambiarArticulo.TileImage = IconChar.CartPlus.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
         }

@@ -28,159 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.totalLbl = new MetroFramework.Controls.MetroLabel();
-            this.precioLbl = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.articuloNombre = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.retirarArticulo = new MetroFramework.Controls.MetroTile();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.cantidadArticulo = new System.Windows.Forms.TextBox();
-            this.cambiarArticulo = new MetroFramework.Controls.MetroTile();
-            this.SuspendLayout();
+            totalLbl = new MetroFramework.Controls.MetroLabel();
+            precioLbl = new MetroFramework.Controls.MetroLabel();
+            metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            articuloNombre = new MetroFramework.Controls.MetroLabel();
+            metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            retirarArticulo = new MetroFramework.Controls.MetroTile();
+            metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            cantidadArticulo = new TextBox();
+            cambiarArticulo = new MetroFramework.Controls.MetroTile();
+            SuspendLayout();
             // 
             // totalLbl
             // 
-            this.totalLbl.AutoSize = true;
-            this.totalLbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.totalLbl.Location = new System.Drawing.Point(153, 211);
-            this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(43, 19);
-            this.totalLbl.TabIndex = 26;
-            this.totalLbl.Text = "RD$ -";
-            this.totalLbl.UseCustomBackColor = true;
+            totalLbl.AutoSize = true;
+            totalLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            totalLbl.Location = new Point(153, 211);
+            totalLbl.Name = "totalLbl";
+            totalLbl.Size = new Size(43, 19);
+            totalLbl.TabIndex = 26;
+            totalLbl.Text = "RD$ -";
+            totalLbl.UseCustomBackColor = true;
             // 
             // precioLbl
             // 
-            this.precioLbl.AutoSize = true;
-            this.precioLbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.precioLbl.Location = new System.Drawing.Point(163, 126);
-            this.precioLbl.Name = "precioLbl";
-            this.precioLbl.Size = new System.Drawing.Size(43, 19);
-            this.precioLbl.TabIndex = 25;
-            this.precioLbl.Text = "RD$ -";
-            this.precioLbl.UseCustomBackColor = true;
+            precioLbl.AutoSize = true;
+            precioLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            precioLbl.Location = new Point(163, 126);
+            precioLbl.Name = "precioLbl";
+            precioLbl.Size = new Size(43, 19);
+            precioLbl.TabIndex = 25;
+            precioLbl.Text = "RD$ -";
+            precioLbl.UseCustomBackColor = true;
             // 
             // metroLabel8
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel8.Location = new System.Drawing.Point(108, 211);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel8.TabIndex = 24;
-            this.metroLabel8.Text = "Total:";
-            this.metroLabel8.UseCustomBackColor = true;
+            metroLabel8.AutoSize = true;
+            metroLabel8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            metroLabel8.Location = new Point(108, 211);
+            metroLabel8.Name = "metroLabel8";
+            metroLabel8.Size = new Size(39, 19);
+            metroLabel8.TabIndex = 24;
+            metroLabel8.Text = "Total:";
+            metroLabel8.UseCustomBackColor = true;
             // 
             // metroLabel7
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel7.Location = new System.Drawing.Point(108, 126);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(49, 19);
-            this.metroLabel7.TabIndex = 23;
-            this.metroLabel7.Text = "Precio:";
-            this.metroLabel7.UseCustomBackColor = true;
+            metroLabel7.AutoSize = true;
+            metroLabel7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            metroLabel7.Location = new Point(108, 126);
+            metroLabel7.Name = "metroLabel7";
+            metroLabel7.Size = new Size(49, 19);
+            metroLabel7.TabIndex = 23;
+            metroLabel7.Text = "Precio:";
+            metroLabel7.UseCustomBackColor = true;
             // 
             // articuloNombre
             // 
-            this.articuloNombre.AutoSize = true;
-            this.articuloNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.articuloNombre.Location = new System.Drawing.Point(163, 100);
-            this.articuloNombre.Name = "articuloNombre";
-            this.articuloNombre.Size = new System.Drawing.Size(15, 19);
-            this.articuloNombre.TabIndex = 22;
-            this.articuloNombre.Text = "-";
-            this.articuloNombre.UseCustomBackColor = true;
+            articuloNombre.AutoSize = true;
+            articuloNombre.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            articuloNombre.Location = new Point(163, 100);
+            articuloNombre.Name = "articuloNombre";
+            articuloNombre.Size = new Size(15, 19);
+            articuloNombre.TabIndex = 22;
+            articuloNombre.Text = "-";
+            articuloNombre.UseCustomBackColor = true;
             // 
             // metroLabel5
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel5.Location = new System.Drawing.Point(99, 100);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(58, 19);
-            this.metroLabel5.TabIndex = 21;
-            this.metroLabel5.Text = "Articulo:";
-            this.metroLabel5.UseCustomBackColor = true;
+            metroLabel5.AutoSize = true;
+            metroLabel5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            metroLabel5.Location = new Point(99, 100);
+            metroLabel5.Name = "metroLabel5";
+            metroLabel5.Size = new Size(58, 19);
+            metroLabel5.TabIndex = 21;
+            metroLabel5.Text = "Articulo:";
+            metroLabel5.UseCustomBackColor = true;
             // 
             // retirarArticulo
             // 
-            this.retirarArticulo.ActiveControl = null;
-            this.retirarArticulo.BackColor = System.Drawing.Color.SteelBlue;
-            this.retirarArticulo.Enabled = false;
-            this.retirarArticulo.Location = new System.Drawing.Point(219, 264);
-            this.retirarArticulo.Name = "retirarArticulo";
-            this.retirarArticulo.Size = new System.Drawing.Size(114, 59);
-            this.retirarArticulo.TabIndex = 18;
-            this.retirarArticulo.Text = "Retirar\r\nArticulo";
-            this.retirarArticulo.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.retirarArticulo.UseCustomBackColor = true;
-            this.retirarArticulo.UseSelectable = true;
-            this.retirarArticulo.UseTileImage = true;
-            this.retirarArticulo.UseVisualStyleBackColor = false;
-            this.retirarArticulo.Click += new System.EventHandler(this.retirarArticulo_Click);
+            retirarArticulo.ActiveControl = null;
+            retirarArticulo.BackColor = Color.SteelBlue;
+            retirarArticulo.Location = new Point(219, 264);
+            retirarArticulo.Name = "retirarArticulo";
+            retirarArticulo.Size = new Size(114, 59);
+            retirarArticulo.TabIndex = 18;
+            retirarArticulo.Text = "Retirar\r\nArticulo";
+            retirarArticulo.TileImageAlign = ContentAlignment.MiddleRight;
+            retirarArticulo.UseCustomBackColor = true;
+            retirarArticulo.UseSelectable = true;
+            retirarArticulo.UseTileImage = true;
+            retirarArticulo.UseVisualStyleBackColor = false;
+            retirarArticulo.Click += retirarArticulo_Click;
             // 
             // metroLabel4
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel4.Location = new System.Drawing.Point(99, 151);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel4.TabIndex = 20;
-            this.metroLabel4.Text = "Cantidad";
-            this.metroLabel4.UseCustomBackColor = true;
+            metroLabel4.AutoSize = true;
+            metroLabel4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            metroLabel4.Location = new Point(99, 151);
+            metroLabel4.Name = "metroLabel4";
+            metroLabel4.Size = new Size(62, 19);
+            metroLabel4.TabIndex = 20;
+            metroLabel4.Text = "Cantidad";
+            metroLabel4.UseCustomBackColor = true;
             // 
             // cantidadArticulo
             // 
-            this.cantidadArticulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cantidadArticulo.Location = new System.Drawing.Point(99, 175);
-            this.cantidadArticulo.Name = "cantidadArticulo";
-            this.cantidadArticulo.Size = new System.Drawing.Size(180, 33);
-            this.cantidadArticulo.TabIndex = 19;
-            this.cantidadArticulo.Text = "0";
-            this.cantidadArticulo.TextChanged += new System.EventHandler(this.cantidadArticulo_TextChanged);
+            cantidadArticulo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cantidadArticulo.Location = new Point(99, 175);
+            cantidadArticulo.Name = "cantidadArticulo";
+            cantidadArticulo.Size = new Size(180, 33);
+            cantidadArticulo.TabIndex = 19;
+            cantidadArticulo.Text = "0";
+            cantidadArticulo.TextChanged += cantidadArticulo_TextChanged;
             // 
             // cambiarArticulo
             // 
-            this.cambiarArticulo.ActiveControl = null;
-            this.cambiarArticulo.BackColor = System.Drawing.Color.SteelBlue;
-            this.cambiarArticulo.Location = new System.Drawing.Point(99, 264);
-            this.cambiarArticulo.Name = "cambiarArticulo";
-            this.cambiarArticulo.Size = new System.Drawing.Size(114, 59);
-            this.cambiarArticulo.TabIndex = 17;
-            this.cambiarArticulo.Text = "Cambiar\r\nCantidad";
-            this.cambiarArticulo.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cambiarArticulo.UseCustomBackColor = true;
-            this.cambiarArticulo.UseSelectable = true;
-            this.cambiarArticulo.UseTileImage = true;
-            this.cambiarArticulo.UseVisualStyleBackColor = false;
-            this.cambiarArticulo.Click += new System.EventHandler(this.cambiarArticulo_Click);
+            cambiarArticulo.ActiveControl = null;
+            cambiarArticulo.BackColor = Color.SteelBlue;
+            cambiarArticulo.Location = new Point(99, 264);
+            cambiarArticulo.Name = "cambiarArticulo";
+            cambiarArticulo.Size = new Size(114, 59);
+            cambiarArticulo.TabIndex = 17;
+            cambiarArticulo.Text = "Cambiar\r\nCantidad";
+            cambiarArticulo.TileImageAlign = ContentAlignment.MiddleRight;
+            cambiarArticulo.UseCustomBackColor = true;
+            cambiarArticulo.UseSelectable = true;
+            cambiarArticulo.UseTileImage = true;
+            cambiarArticulo.UseVisualStyleBackColor = false;
+            cambiarArticulo.Click += cambiarArticulo_Click;
             // 
             // AccionDetalle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 373);
-            this.Controls.Add(this.totalLbl);
-            this.Controls.Add(this.precioLbl);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.articuloNombre);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.retirarArticulo);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.cantidadArticulo);
-            this.Controls.Add(this.cambiarArticulo);
-            this.Name = "AccionDetalle";
-            this.Text = "Que desea hacer con el detalle?";
-            this.Load += new System.EventHandler(this.AccionDetalle_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(442, 373);
+            Controls.Add(totalLbl);
+            Controls.Add(precioLbl);
+            Controls.Add(metroLabel8);
+            Controls.Add(metroLabel7);
+            Controls.Add(articuloNombre);
+            Controls.Add(metroLabel5);
+            Controls.Add(retirarArticulo);
+            Controls.Add(metroLabel4);
+            Controls.Add(cantidadArticulo);
+            Controls.Add(cambiarArticulo);
+            Name = "AccionDetalle";
+            Text = "Que desea hacer con el detalle?";
+            Load += AccionDetalle_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

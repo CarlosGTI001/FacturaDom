@@ -39,6 +39,7 @@ namespace FacturaDom.BDO.Vistas
                 .Cells[0]
                 .Value
                 .ToString())).FirstOrDefault();
+            busquedaText.Text = Articulo.Codigo;
         }
 
         private void elegir_Articulo_Click(object sender, EventArgs e)

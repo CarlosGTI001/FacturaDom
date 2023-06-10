@@ -79,23 +79,39 @@ namespace FacturaDom.BDO.Vistas
 
         private void eliminarFactura_Click(object sender, EventArgs e)
         {
-            DBDataContext.Instance.Factura.Remove(factura);
-            DBDataContext.Instance.SaveChanges();
-            facturarPanel.Hide();
-            clientePanel.Hide();
-            productosPanel.Hide();
-            eliminarFactura.Hide();
-            clienteLbl.Text = "-";
-            cliente = null;
-            codigoLbl.Text = "-";
-            direccionLbl.Text = "-";
-            nuevaFactura.Show();
-            facturaBox.Show();
+            logon logon = new logon();
+            alerta alerta = new alerta();
+            alerta.Text = "Aviso";
+            var iconImage = IconChar.QuestionCircle.ToBitmap(size: 128, color: Color.Blue, iconFont: IconFont.Auto);
+            alerta.icon.Image = iconImage;
+            alerta.label1.Text = "En realidad desea eliminar la factura?";
+            var a = alerta.ShowDialog();
+            if (a == DialogResult.OK)
+            {
+                DBDataContext.Instance.Factura.Remove(factura);
+                DBDataContext.Instance.SaveChanges();
+                facturarPanel.Hide();
+                clientePanel.Hide();
+                productosPanel.Hide();
+                eliminarFactura.Hide();
+                clienteLbl.Text = "-";
+                cliente = null;
+                codigoLbl.Text = "-";
+                direccionLbl.Text = "-";
+                nuevaFactura.Show();
+                facturaBox.Show();
+            }
+            else
+            {
+                alerta.Close();
+            }
+
+            
         }
 
         private void agregarArticulo_Click(object sender, EventArgs e)
         {
-            if(articulo.Stock >= decimal.Parse(cantidadArticulo.Text))
+            if (articulo.Stock >= decimal.Parse(cantidadArticulo.Text))
             {
                 detalle.Add(new DetalleFactura
                 {
@@ -169,24 +185,26 @@ namespace FacturaDom.BDO.Vistas
 
         private void detalleGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var modificable = detalle.Where(a => a
-                .Codigo == detalleGrid
-                .Rows[e.RowIndex]
-                .Cells[0]
-                .Value
-                .ToString()).FirstOrDefault();
-            AccionDetalle detalleModificar = new AccionDetalle(modificable);
-            if(detalleModificar.ShowDialog() == DialogResult.OK)
+            var modificable = detalle.FirstOrDefault(a => a.Codigo == detalleGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (new AccionDetalle(modificable).ShowDialog() == DialogResult.OK)
             {
                 detalle.Remove(modificable);
             }
             else
             {
-                detalle[detalle.IndexOf(modificable)].Cantidad = modificable.Cantidad;
-                detalle[detalle.IndexOf(modificable)].Total = modificable.Cantidad * modificable.Precio;
-                detalleGrid.DataSource = "";
-                detalleGrid.DataSource = detalle; ;
+                int index = detalle.IndexOf(modificable);
+                detalle[index].Cantidad = modificable.Cantidad;
+                detalle[index].Total = modificable.Cantidad * modificable.Precio;
+                detalleGrid.DataSource = null;
+                detalleGrid.DataSource = detalle;
             }
+            totalRds.Text = "RD$" + detalle.Sum(a => a.Total);
+            articuloCantidad.Text = detalle.Count.ToString();
+        }
+
+        private void imprimirFactura_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
