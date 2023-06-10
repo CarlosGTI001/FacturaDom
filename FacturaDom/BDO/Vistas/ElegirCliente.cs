@@ -26,6 +26,7 @@ namespace FacturaDom.BDO.Vistas
         private void ElegirCliente_Load(object sender, EventArgs e)
         {
             elegir_Cliente.Hide();
+
         }
 
         private void elegir_Cliente_Click(object sender, EventArgs e)
@@ -38,6 +39,15 @@ namespace FacturaDom.BDO.Vistas
         {
             elegir_Cliente.Show();
             Cedula = clienteGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            busquedaText.Text = Cedula;
+        }
+
+        private void busquedaText_TextChanged(object sender, EventArgs e)
+        {
+            clienteGrid.DataSource = clienteController
+                .obtenerClientes()
+                .Where(a => a.Cedula.Contains(busquedaText.Text) || a.Nombre.Contains(busquedaText.Text) || a.Apellido.Contains(busquedaText.Text))
+                .ToList();
         }
     }
 }

@@ -28,285 +28,288 @@
         /// </summary>
         private void InitializeComponent()
         {
-            nombresText = new TextBox();
-            metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            contrasenaText = new TextBox();
-            metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            userText = new TextBox();
-            metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            apellidosText = new TextBox();
-            metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            tipoUsuarioCbx = new MetroFramework.Controls.MetroComboBox();
-            cedulaText = new MaskedTextBox();
-            metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            telefonoText = new MaskedTextBox();
-            metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            fechaNacimientoPicker = new MetroFramework.Controls.MetroDateTime();
-            direccionText = new TextBox();
-            metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            codigoText = new TextBox();
-            metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            generarCredenciales = new MetroFramework.Controls.MetroTile();
-            guardarUsuario = new MetroFramework.Controls.MetroTile();
-            SuspendLayout();
+            this.nombresText = new System.Windows.Forms.TextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.contrasenaText = new System.Windows.Forms.TextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.userText = new System.Windows.Forms.TextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.apellidosText = new System.Windows.Forms.TextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.tipoUsuarioCbx = new MetroFramework.Controls.MetroComboBox();
+            this.cedulaText = new System.Windows.Forms.MaskedTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.telefonoText = new System.Windows.Forms.MaskedTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.fechaNacimientoPicker = new MetroFramework.Controls.MetroDateTime();
+            this.direccionText = new System.Windows.Forms.TextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.codigoText = new System.Windows.Forms.TextBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.generarCredenciales = new MetroFramework.Controls.MetroTile();
+            this.guardarUsuario = new MetroFramework.Controls.MetroTile();
+            this.SuspendLayout();
             // 
             // nombresText
             // 
-            nombresText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            nombresText.Location = new Point(39, 114);
-            nombresText.Name = "nombresText";
-            nombresText.Size = new Size(228, 33);
-            nombresText.TabIndex = 1;
+            this.nombresText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nombresText.Location = new System.Drawing.Point(39, 114);
+            this.nombresText.Name = "nombresText";
+            this.nombresText.Size = new System.Drawing.Size(228, 33);
+            this.nombresText.TabIndex = 1;
             // 
             // metroLabel3
             // 
-            metroLabel3.AutoSize = true;
-            metroLabel3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel3.Location = new Point(39, 83);
-            metroLabel3.Name = "metroLabel3";
-            metroLabel3.Size = new Size(68, 19);
-            metroLabel3.TabIndex = 12;
-            metroLabel3.Text = "Nombres ";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel3.Location = new System.Drawing.Point(39, 83);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Nombres ";
             // 
             // contrasenaText
             // 
-            contrasenaText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            contrasenaText.Location = new Point(39, 496);
-            contrasenaText.Name = "contrasenaText";
-            contrasenaText.PasswordChar = '*';
-            contrasenaText.Size = new Size(228, 33);
-            contrasenaText.TabIndex = 10;
+            this.contrasenaText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.contrasenaText.Location = new System.Drawing.Point(39, 496);
+            this.contrasenaText.Name = "contrasenaText";
+            this.contrasenaText.PasswordChar = '*';
+            this.contrasenaText.Size = new System.Drawing.Size(228, 33);
+            this.contrasenaText.TabIndex = 10;
             // 
             // metroLabel2
             // 
-            metroLabel2.AutoSize = true;
-            metroLabel2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel2.Location = new Point(39, 465);
-            metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(75, 19);
-            metroLabel2.TabIndex = 16;
-            metroLabel2.Text = "Contrasena";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel2.Location = new System.Drawing.Point(39, 465);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel2.TabIndex = 16;
+            this.metroLabel2.Text = "Contrasena";
             // 
             // userText
             // 
-            userText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            userText.Location = new Point(39, 420);
-            userText.Name = "userText";
-            userText.Size = new Size(228, 33);
-            userText.TabIndex = 8;
+            this.userText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userText.Location = new System.Drawing.Point(39, 420);
+            this.userText.Name = "userText";
+            this.userText.Size = new System.Drawing.Size(228, 33);
+            this.userText.TabIndex = 8;
             // 
             // metroLabel1
             // 
-            metroLabel1.AutoSize = true;
-            metroLabel1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel1.Location = new Point(39, 389);
-            metroLabel1.Name = "metroLabel1";
-            metroLabel1.Size = new Size(126, 19);
-            metroLabel1.TabIndex = 14;
-            metroLabel1.Text = "Nombre de Usuario";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel1.Location = new System.Drawing.Point(39, 389);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(126, 19);
+            this.metroLabel1.TabIndex = 14;
+            this.metroLabel1.Text = "Nombre de Usuario";
             // 
             // apellidosText
             // 
-            apellidosText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            apellidosText.Location = new Point(316, 114);
-            apellidosText.Name = "apellidosText";
-            apellidosText.Size = new Size(228, 33);
-            apellidosText.TabIndex = 2;
+            this.apellidosText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.apellidosText.Location = new System.Drawing.Point(316, 114);
+            this.apellidosText.Name = "apellidosText";
+            this.apellidosText.Size = new System.Drawing.Size(228, 33);
+            this.apellidosText.TabIndex = 2;
             // 
             // metroLabel4
             // 
-            metroLabel4.AutoSize = true;
-            metroLabel4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel4.Location = new Point(316, 83);
-            metroLabel4.Name = "metroLabel4";
-            metroLabel4.Size = new Size(63, 19);
-            metroLabel4.TabIndex = 18;
-            metroLabel4.Text = "Apellidos";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel4.Location = new System.Drawing.Point(316, 83);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel4.TabIndex = 18;
+            this.metroLabel4.Text = "Apellidos";
             // 
             // metroLabel5
             // 
-            metroLabel5.AutoSize = true;
-            metroLabel5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel5.Location = new Point(39, 159);
-            metroLabel5.Name = "metroLabel5";
-            metroLabel5.Size = new Size(102, 19);
-            metroLabel5.TabIndex = 19;
-            metroLabel5.Text = "Tipo de Usuario";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel5.Location = new System.Drawing.Point(39, 159);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel5.TabIndex = 19;
+            this.metroLabel5.Text = "Tipo de Usuario";
             // 
             // tipoUsuarioCbx
             // 
-            tipoUsuarioCbx.FontSize = MetroFramework.MetroComboBoxSize.Tall;
-            tipoUsuarioCbx.FormattingEnabled = true;
-            tipoUsuarioCbx.ItemHeight = 29;
-            tipoUsuarioCbx.Items.AddRange(new object[] { "Elegir uno...", "Administrador", "Usuario" });
-            tipoUsuarioCbx.Location = new Point(39, 190);
-            tipoUsuarioCbx.Name = "tipoUsuarioCbx";
-            tipoUsuarioCbx.Size = new Size(228, 35);
-            tipoUsuarioCbx.TabIndex = 3;
-            tipoUsuarioCbx.UseSelectable = true;
+            this.tipoUsuarioCbx.FontSize = MetroFramework.MetroComboBoxSize.Tall;
+            this.tipoUsuarioCbx.FormattingEnabled = true;
+            this.tipoUsuarioCbx.ItemHeight = 29;
+            this.tipoUsuarioCbx.Items.AddRange(new object[] {
+            "Elegir uno...",
+            "Administrador",
+            "Usuario"});
+            this.tipoUsuarioCbx.Location = new System.Drawing.Point(39, 190);
+            this.tipoUsuarioCbx.Name = "tipoUsuarioCbx";
+            this.tipoUsuarioCbx.Size = new System.Drawing.Size(228, 35);
+            this.tipoUsuarioCbx.TabIndex = 3;
+            this.tipoUsuarioCbx.UseSelectable = true;
             // 
             // cedulaText
             // 
-            cedulaText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cedulaText.Location = new Point(316, 190);
-            cedulaText.Mask = "000-0000000-0";
-            cedulaText.Name = "cedulaText";
-            cedulaText.Size = new Size(228, 33);
-            cedulaText.TabIndex = 4;
+            this.cedulaText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cedulaText.Location = new System.Drawing.Point(316, 190);
+            this.cedulaText.Mask = "000-0000000-0";
+            this.cedulaText.Name = "cedulaText";
+            this.cedulaText.Size = new System.Drawing.Size(228, 33);
+            this.cedulaText.TabIndex = 4;
             // 
             // metroLabel6
             // 
-            metroLabel6.AutoSize = true;
-            metroLabel6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel6.Location = new Point(316, 159);
-            metroLabel6.Name = "metroLabel6";
-            metroLabel6.Size = new Size(50, 19);
-            metroLabel6.TabIndex = 22;
-            metroLabel6.Text = "Cedula";
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel6.Location = new System.Drawing.Point(316, 159);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel6.TabIndex = 22;
+            this.metroLabel6.Text = "Cedula";
             // 
             // metroLabel7
             // 
-            metroLabel7.AutoSize = true;
-            metroLabel7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel7.Location = new Point(39, 237);
-            metroLabel7.Name = "metroLabel7";
-            metroLabel7.Size = new Size(130, 19);
-            metroLabel7.TabIndex = 24;
-            metroLabel7.Text = "Numero de Telefono";
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel7.Location = new System.Drawing.Point(39, 237);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel7.TabIndex = 24;
+            this.metroLabel7.Text = "Numero de Telefono";
             // 
             // telefonoText
             // 
-            telefonoText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            telefonoText.Location = new Point(39, 268);
-            telefonoText.Mask = "(000)-000-0000";
-            telefonoText.Name = "telefonoText";
-            telefonoText.Size = new Size(228, 33);
-            telefonoText.TabIndex = 5;
+            this.telefonoText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.telefonoText.Location = new System.Drawing.Point(39, 268);
+            this.telefonoText.Mask = "(000)-000-0000";
+            this.telefonoText.Name = "telefonoText";
+            this.telefonoText.Size = new System.Drawing.Size(228, 33);
+            this.telefonoText.TabIndex = 5;
             // 
             // metroLabel8
             // 
-            metroLabel8.AutoSize = true;
-            metroLabel8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel8.Location = new Point(316, 237);
-            metroLabel8.Name = "metroLabel8";
-            metroLabel8.Size = new Size(133, 19);
-            metroLabel8.TabIndex = 25;
-            metroLabel8.Text = "Fecha de Nacimiento";
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel8.Location = new System.Drawing.Point(316, 237);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(133, 19);
+            this.metroLabel8.TabIndex = 25;
+            this.metroLabel8.Text = "Fecha de Nacimiento";
             // 
             // fechaNacimientoPicker
             // 
-            fechaNacimientoPicker.FontSize = MetroFramework.MetroDateTimeSize.Tall;
-            fechaNacimientoPicker.Location = new Point(316, 268);
-            fechaNacimientoPicker.MinimumSize = new Size(0, 35);
-            fechaNacimientoPicker.Name = "fechaNacimientoPicker";
-            fechaNacimientoPicker.Size = new Size(228, 35);
-            fechaNacimientoPicker.TabIndex = 6;
-            fechaNacimientoPicker.ValueChanged += fechaNacimientoPicker_ValueChanged;
+            this.fechaNacimientoPicker.FontSize = MetroFramework.MetroDateTimeSize.Tall;
+            this.fechaNacimientoPicker.Location = new System.Drawing.Point(316, 268);
+            this.fechaNacimientoPicker.MinimumSize = new System.Drawing.Size(0, 35);
+            this.fechaNacimientoPicker.Name = "fechaNacimientoPicker";
+            this.fechaNacimientoPicker.Size = new System.Drawing.Size(228, 35);
+            this.fechaNacimientoPicker.TabIndex = 6;
+            this.fechaNacimientoPicker.ValueChanged += new System.EventHandler(this.fechaNacimientoPicker_ValueChanged);
             // 
             // direccionText
             // 
-            direccionText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            direccionText.Location = new Point(39, 344);
-            direccionText.Name = "direccionText";
-            direccionText.Size = new Size(505, 33);
-            direccionText.TabIndex = 7;
+            this.direccionText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.direccionText.Location = new System.Drawing.Point(39, 344);
+            this.direccionText.Name = "direccionText";
+            this.direccionText.Size = new System.Drawing.Size(505, 33);
+            this.direccionText.TabIndex = 7;
             // 
             // metroLabel9
             // 
-            metroLabel9.AutoSize = true;
-            metroLabel9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel9.Location = new Point(39, 313);
-            metroLabel9.Name = "metroLabel9";
-            metroLabel9.Size = new Size(63, 19);
-            metroLabel9.TabIndex = 28;
-            metroLabel9.Text = "Direccion";
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel9.Location = new System.Drawing.Point(39, 313);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel9.TabIndex = 28;
+            this.metroLabel9.Text = "Direccion";
             // 
             // codigoText
             // 
-            codigoText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            codigoText.Location = new Point(316, 420);
-            codigoText.Name = "codigoText";
-            codigoText.Size = new Size(228, 33);
-            codigoText.TabIndex = 9;
+            this.codigoText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.codigoText.Location = new System.Drawing.Point(316, 420);
+            this.codigoText.Name = "codigoText";
+            this.codigoText.Size = new System.Drawing.Size(228, 33);
+            this.codigoText.TabIndex = 9;
             // 
             // metroLabel10
             // 
-            metroLabel10.AutoSize = true;
-            metroLabel10.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel10.Location = new Point(316, 389);
-            metroLabel10.Name = "metroLabel10";
-            metroLabel10.Size = new Size(120, 19);
-            metroLabel10.TabIndex = 30;
-            metroLabel10.Text = "Codigo de Usuario";
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel10.Location = new System.Drawing.Point(316, 389);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(120, 19);
+            this.metroLabel10.TabIndex = 30;
+            this.metroLabel10.Text = "Codigo de Usuario";
             // 
             // generarCredenciales
             // 
-            generarCredenciales.ActiveControl = null;
-            generarCredenciales.BackColor = Color.SteelBlue;
-            generarCredenciales.BackgroundImageLayout = ImageLayout.Stretch;
-            generarCredenciales.Location = new Point(316, 465);
-            generarCredenciales.Name = "generarCredenciales";
-            generarCredenciales.Size = new Size(105, 81);
-            generarCredenciales.TabIndex = 32;
-            generarCredenciales.Text = "Generar\r\nCredenciales";
-            generarCredenciales.TileImageAlign = ContentAlignment.TopRight;
-            generarCredenciales.UseCustomBackColor = true;
-            generarCredenciales.UseSelectable = true;
-            generarCredenciales.UseTileImage = true;
-            generarCredenciales.UseVisualStyleBackColor = false;
-            generarCredenciales.Click += generarCredenciales_Click;
+            this.generarCredenciales.ActiveControl = null;
+            this.generarCredenciales.BackColor = System.Drawing.Color.SteelBlue;
+            this.generarCredenciales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generarCredenciales.Location = new System.Drawing.Point(316, 465);
+            this.generarCredenciales.Name = "generarCredenciales";
+            this.generarCredenciales.Size = new System.Drawing.Size(105, 81);
+            this.generarCredenciales.TabIndex = 32;
+            this.generarCredenciales.Text = "Generar\r\nCredenciales";
+            this.generarCredenciales.TileImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.generarCredenciales.UseCustomBackColor = true;
+            this.generarCredenciales.UseSelectable = true;
+            this.generarCredenciales.UseTileImage = true;
+            this.generarCredenciales.UseVisualStyleBackColor = false;
+            this.generarCredenciales.Click += new System.EventHandler(this.generarCredenciales_Click);
             // 
             // guardarUsuario
             // 
-            guardarUsuario.ActiveControl = null;
-            guardarUsuario.BackColor = Color.SteelBlue;
-            guardarUsuario.Location = new Point(439, 465);
-            guardarUsuario.Name = "guardarUsuario";
-            guardarUsuario.Size = new Size(105, 81);
-            guardarUsuario.TabIndex = 31;
-            guardarUsuario.Text = "Guardar\r\nUsuario";
-            guardarUsuario.TileImageAlign = ContentAlignment.TopRight;
-            guardarUsuario.UseCustomBackColor = true;
-            guardarUsuario.UseSelectable = true;
-            guardarUsuario.UseTileImage = true;
-            guardarUsuario.UseVisualStyleBackColor = false;
-            guardarUsuario.Click += guardarUsuario_Click;
+            this.guardarUsuario.ActiveControl = null;
+            this.guardarUsuario.BackColor = System.Drawing.Color.SteelBlue;
+            this.guardarUsuario.Location = new System.Drawing.Point(439, 465);
+            this.guardarUsuario.Name = "guardarUsuario";
+            this.guardarUsuario.Size = new System.Drawing.Size(105, 81);
+            this.guardarUsuario.TabIndex = 31;
+            this.guardarUsuario.Text = "Guardar\r\nUsuario";
+            this.guardarUsuario.TileImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.guardarUsuario.UseCustomBackColor = true;
+            this.guardarUsuario.UseSelectable = true;
+            this.guardarUsuario.UseTileImage = true;
+            this.guardarUsuario.UseVisualStyleBackColor = false;
+            this.guardarUsuario.Click += new System.EventHandler(this.guardarUsuario_Click);
             // 
             // agregarUsuario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(583, 572);
-            Controls.Add(generarCredenciales);
-            Controls.Add(guardarUsuario);
-            Controls.Add(codigoText);
-            Controls.Add(metroLabel10);
-            Controls.Add(direccionText);
-            Controls.Add(metroLabel9);
-            Controls.Add(fechaNacimientoPicker);
-            Controls.Add(metroLabel8);
-            Controls.Add(metroLabel7);
-            Controls.Add(telefonoText);
-            Controls.Add(metroLabel6);
-            Controls.Add(cedulaText);
-            Controls.Add(tipoUsuarioCbx);
-            Controls.Add(metroLabel5);
-            Controls.Add(apellidosText);
-            Controls.Add(metroLabel4);
-            Controls.Add(contrasenaText);
-            Controls.Add(metroLabel2);
-            Controls.Add(userText);
-            Controls.Add(metroLabel1);
-            Controls.Add(nombresText);
-            Controls.Add(metroLabel3);
-            Name = "agregarUsuario";
-            Text = "Nuevo Usuario";
-            FormClosing += agregarUsuario_FormClosing;
-            Load += agregarUsuario_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(583, 572);
+            this.Controls.Add(this.generarCredenciales);
+            this.Controls.Add(this.guardarUsuario);
+            this.Controls.Add(this.codigoText);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.direccionText);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.fechaNacimientoPicker);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.telefonoText);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.cedulaText);
+            this.Controls.Add(this.tipoUsuarioCbx);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.apellidosText);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.contrasenaText);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.userText);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.nombresText);
+            this.Controls.Add(this.metroLabel3);
+            this.Name = "agregarUsuario";
+            this.Text = "Nuevo Usuario";
+            this.Load += new System.EventHandler(this.agregarUsuario_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

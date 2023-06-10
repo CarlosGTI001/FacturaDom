@@ -31,13 +31,12 @@ namespace FacturaDom.BDO.Vistas
             eliminarFactura.TileImage = IconChar.Trash.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
             nuevaFactura.TileImage = IconChar.FileCirclePlus.ToBitmap(size: 64, color: Color.White, iconFont: IconFont.Auto);
             agregarArticulo.TileImage = IconChar.Add.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
-            imprimirFactura.TileImage = IconChar.Print.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
+            imprimirFactura.TileImage = IconChar.CartShopping.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
             buscarArticulo.TileImage = IconChar.Search.ToBitmap(size: 54, color: Color.White, iconFont: IconFont.Auto);
             facturarPanel.Hide();
             clientePanel.Hide();
             productosPanel.Hide();
             eliminarFactura.Hide();
-            detalleGrid.DataSource = detalleFacturaBindingSource;
         }
 
         public Cliente cliente;
@@ -67,6 +66,7 @@ namespace FacturaDom.BDO.Vistas
                 };
                 DBDataContext.Instance.Factura.Add(factura);
                 DBDataContext.Instance.SaveChanges();
+                nuevaFactura.Hide();
                 eliminarFactura.Show();
             }
 
@@ -89,26 +89,36 @@ namespace FacturaDom.BDO.Vistas
             cliente = null;
             codigoLbl.Text = "-";
             direccionLbl.Text = "-";
+            nuevaFactura.Show();
             facturaBox.Show();
         }
 
         private void agregarArticulo_Click(object sender, EventArgs e)
         {
-            detalle.Add(new DetalleFactura
+            if(articulo.Stock >= decimal.Parse(cantidadArticulo.Text))
             {
-                Codigo = "DET" + articulo.Codigo + detalle.Count() + DateTime.Now.ToString("ddMMyymmss"),
-                Nombre = articulo.Nombre,
-                Descripcion = articulo.Descripcion,
-                Precio = articulo.Precio,
-                TipoMedida = articulo.TipoMedida,
-                Cantidad = decimal.Parse(cantidadArticulo.Text),
-                Total = decimal.Parse(totalLbl.Text.Replace("RD$", ""))
-            });
+                detalle.Add(new DetalleFactura
+                {
+                    Codigo = "DET" + articulo.Codigo + detalle.Count() + DateTime.Now.ToString("ddMMyymmss"),
+                    Nombre = articulo.Nombre,
+                    Descripcion = articulo.Descripcion,
+                    Precio = articulo.Precio,
+                    TipoMedida = articulo.TipoMedida,
+                    Cantidad = decimal.Parse(cantidadArticulo.Text),
+                    Total = decimal.Parse(totalLbl.Text.Replace("RD$", ""))
+                });
 
-            totalRds.Text = "RD$" + detalle.Sum(a => a.Total);
-            articulosCantidad.Text = detalle.Count().ToString();
-            detalleGrid.DataSource = detalle;
-            quitar();
+                totalRds.Text = "RD$" + detalle.Sum(a => a.Total);
+                articuloCantidad.Text = detalle.Count().ToString();
+                cantidadArticulo.Text = "0";
+                detalleGrid.DataSource = "";
+                detalleGrid.DataSource = detalle;
+                quitar();
+            }
+            else
+            {
+
+            }
         }
 
         public List<Modelos.DetalleFactura> detalle = new List<DetalleFactura>();
@@ -131,7 +141,7 @@ namespace FacturaDom.BDO.Vistas
 
         private void cantidadArticulo_TextChanged(object sender, EventArgs e)
         {
-            if (decimal.TryParse(cantidadArticulo.Text, out decimal result))
+            if (decimal.TryParse(cantidadArticulo.Text, out decimal result) && articulo != null)
             {
                 totalLbl.Text = "RD$" + (result * articulo.Precio);
             }
@@ -148,13 +158,35 @@ namespace FacturaDom.BDO.Vistas
             articuloNombre.Text = "-";
             precioLbl.Text = "RD$" + "-";
             totalLbl.Text = "RD$" + "-";
-            articulosCantidad.Text = "0";
+            cantidadArticulo.Text = "0";
             articulo = null;
         }
 
         private void facturarPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void detalleGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var modificable = detalle.Where(a => a
+                .Codigo == detalleGrid
+                .Rows[e.RowIndex]
+                .Cells[0]
+                .Value
+                .ToString()).FirstOrDefault();
+            AccionDetalle detalleModificar = new AccionDetalle(modificable);
+            if(detalleModificar.ShowDialog() == DialogResult.OK)
+            {
+                detalle.Remove(modificable);
+            }
+            else
+            {
+                detalle[detalle.IndexOf(modificable)].Cantidad = modificable.Cantidad;
+                detalle[detalle.IndexOf(modificable)].Total = modificable.Cantidad * modificable.Precio;
+                detalleGrid.DataSource = "";
+                detalleGrid.DataSource = detalle; ;
+            }
         }
     }
 }

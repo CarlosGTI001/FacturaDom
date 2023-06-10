@@ -28,591 +28,601 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            facturarPanel = new MetroFramework.Controls.MetroPanel();
-            articulosCantidad = new MetroFramework.Controls.MetroLabel();
-            metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            totalRds = new MetroFramework.Controls.MetroLabel();
-            metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            detalleGrid = new MetroFramework.Controls.MetroGrid();
-            codigoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nombreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            precioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            cantidadDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tipoMedidaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            descuentoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            totalDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            descripcionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            detalleFacturaBindingSource = new BindingSource(components);
-            imprimirFactura = new MetroFramework.Controls.MetroTile();
-            productosPanel = new MetroFramework.Controls.MetroPanel();
-            quitarArticulo = new MetroFramework.Controls.MetroButton();
-            totalLbl = new MetroFramework.Controls.MetroLabel();
-            precioLbl = new MetroFramework.Controls.MetroLabel();
-            metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            articuloNombre = new MetroFramework.Controls.MetroLabel();
-            metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            agregarArticulo = new MetroFramework.Controls.MetroTile();
-            metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            cantidadArticulo = new TextBox();
-            buscarArticulo = new MetroFramework.Controls.MetroTile();
-            articuloBindingSource = new BindingSource(components);
-            nuevaFactura = new MetroFramework.Controls.MetroTile();
-            eliminarFactura = new MetroFramework.Controls.MetroTile();
-            clientePanel = new MetroFramework.Controls.MetroPanel();
-            direccionLbl = new MetroFramework.Controls.MetroLabel();
-            clienteLbl = new MetroFramework.Controls.MetroLabel();
-            codigoLbl = new MetroFramework.Controls.MetroLabel();
-            metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            facturaBox = new FontAwesome.Sharp.IconPictureBox();
-            facturarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)detalleGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)detalleFacturaBindingSource).BeginInit();
-            productosPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)articuloBindingSource).BeginInit();
-            clientePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)facturaBox).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.facturarPanel = new MetroFramework.Controls.MetroPanel();
+            this.articuloCantidad = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.totalRds = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.detalleGrid = new MetroFramework.Controls.MetroGrid();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalleFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imprimirFactura = new MetroFramework.Controls.MetroTile();
+            this.productosPanel = new MetroFramework.Controls.MetroPanel();
+            this.quitarArticulo = new MetroFramework.Controls.MetroButton();
+            this.totalLbl = new MetroFramework.Controls.MetroLabel();
+            this.precioLbl = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.articuloNombre = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.agregarArticulo = new MetroFramework.Controls.MetroTile();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.cantidadArticulo = new System.Windows.Forms.TextBox();
+            this.buscarArticulo = new MetroFramework.Controls.MetroTile();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nuevaFactura = new MetroFramework.Controls.MetroTile();
+            this.eliminarFactura = new MetroFramework.Controls.MetroTile();
+            this.clientePanel = new MetroFramework.Controls.MetroPanel();
+            this.direccionLbl = new MetroFramework.Controls.MetroLabel();
+            this.clienteLbl = new MetroFramework.Controls.MetroLabel();
+            this.codigoLbl = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.facturaBox = new FontAwesome.Sharp.IconPictureBox();
+            this.facturarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleFacturaBindingSource)).BeginInit();
+            this.productosPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
+            this.clientePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBox)).BeginInit();
+            this.SuspendLayout();
             // 
             // facturarPanel
             // 
-            facturarPanel.Controls.Add(articulosCantidad);
-            facturarPanel.Controls.Add(metroLabel2);
-            facturarPanel.Controls.Add(totalRds);
-            facturarPanel.Controls.Add(metroLabel1);
-            facturarPanel.Controls.Add(detalleGrid);
-            facturarPanel.Controls.Add(imprimirFactura);
-            facturarPanel.HorizontalScrollbarBarColor = true;
-            facturarPanel.HorizontalScrollbarHighlightOnWheel = false;
-            facturarPanel.HorizontalScrollbarSize = 10;
-            facturarPanel.Location = new Point(26, 206);
-            facturarPanel.Name = "facturarPanel";
-            facturarPanel.Size = new Size(552, 348);
-            facturarPanel.TabIndex = 0;
-            facturarPanel.VerticalScrollbarBarColor = true;
-            facturarPanel.VerticalScrollbarHighlightOnWheel = false;
-            facturarPanel.VerticalScrollbarSize = 10;
-            facturarPanel.Paint += facturarPanel_Paint;
+            this.facturarPanel.Controls.Add(this.articuloCantidad);
+            this.facturarPanel.Controls.Add(this.metroLabel2);
+            this.facturarPanel.Controls.Add(this.totalRds);
+            this.facturarPanel.Controls.Add(this.metroLabel1);
+            this.facturarPanel.Controls.Add(this.detalleGrid);
+            this.facturarPanel.Controls.Add(this.imprimirFactura);
+            this.facturarPanel.HorizontalScrollbarBarColor = true;
+            this.facturarPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.facturarPanel.HorizontalScrollbarSize = 10;
+            this.facturarPanel.Location = new System.Drawing.Point(26, 206);
+            this.facturarPanel.Name = "facturarPanel";
+            this.facturarPanel.Size = new System.Drawing.Size(552, 348);
+            this.facturarPanel.TabIndex = 0;
+            this.facturarPanel.VerticalScrollbarBarColor = true;
+            this.facturarPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.facturarPanel.VerticalScrollbarSize = 10;
             // 
-            // articulosCantidad
+            // articuloCantidad
             // 
-            articulosCantidad.AutoSize = true;
-            articulosCantidad.FontSize = MetroFramework.MetroLabelSize.Tall;
-            articulosCantidad.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            articulosCantidad.Location = new Point(385, 280);
-            articulosCantidad.Name = "articulosCantidad";
-            articulosCantidad.Size = new Size(22, 25);
-            articulosCantidad.TabIndex = 6;
-            articulosCantidad.Text = "0";
+            this.articuloCantidad.AutoSize = true;
+            this.articuloCantidad.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.articuloCantidad.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.articuloCantidad.Location = new System.Drawing.Point(385, 280);
+            this.articuloCantidad.Name = "articuloCantidad";
+            this.articuloCantidad.Size = new System.Drawing.Size(22, 25);
+            this.articuloCantidad.TabIndex = 6;
+            this.articuloCantidad.Text = "0";
             // 
             // metroLabel2
             // 
-            metroLabel2.AutoSize = true;
-            metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel2.Location = new Point(285, 280);
-            metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(94, 25);
-            metroLabel2.TabIndex = 5;
-            metroLabel2.Text = "Articulos:";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(285, 280);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(94, 25);
+            this.metroLabel2.TabIndex = 5;
+            this.metroLabel2.Text = "Articulos:";
             // 
             // totalRds
             // 
-            totalRds.AutoSize = true;
-            totalRds.FontSize = MetroFramework.MetroLabelSize.Tall;
-            totalRds.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            totalRds.Location = new Point(385, 305);
-            totalRds.Name = "totalRds";
-            totalRds.Size = new Size(47, 25);
-            totalRds.TabIndex = 4;
-            totalRds.Text = "RD$";
+            this.totalRds.AutoSize = true;
+            this.totalRds.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.totalRds.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.totalRds.Location = new System.Drawing.Point(385, 305);
+            this.totalRds.Name = "totalRds";
+            this.totalRds.Size = new System.Drawing.Size(47, 25);
+            this.totalRds.TabIndex = 4;
+            this.totalRds.Text = "RD$";
             // 
             // metroLabel1
             // 
-            metroLabel1.AutoSize = true;
-            metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel1.Location = new Point(320, 305);
-            metroLabel1.Name = "metroLabel1";
-            metroLabel1.Size = new Size(59, 25);
-            metroLabel1.TabIndex = 3;
-            metroLabel1.Text = "Total:";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(320, 305);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(59, 25);
+            this.metroLabel1.TabIndex = 3;
+            this.metroLabel1.Text = "Total:";
             // 
             // detalleGrid
             // 
-            detalleGrid.AllowUserToAddRows = false;
-            detalleGrid.AllowUserToDeleteRows = false;
-            detalleGrid.AllowUserToResizeRows = false;
-            detalleGrid.AutoGenerateColumns = false;
-            detalleGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            detalleGrid.BackgroundColor = Color.FromArgb(255, 255, 255);
-            detalleGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            detalleGrid.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            detalleGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            detalleGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            detalleGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            detalleGrid.Columns.AddRange(new DataGridViewColumn[] { codigoDataGridViewTextBoxColumn, nombreDataGridViewTextBoxColumn, precioDataGridViewTextBoxColumn, cantidadDataGridViewTextBoxColumn, tipoMedidaDataGridViewTextBoxColumn, descuentoDataGridViewTextBoxColumn, totalDataGridViewTextBoxColumn, descripcionDataGridViewTextBoxColumn });
-            detalleGrid.DataSource = detalleFacturaBindingSource;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            detalleGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            detalleGrid.Dock = DockStyle.Top;
-            detalleGrid.EnableHeadersVisualStyles = false;
-            detalleGrid.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            detalleGrid.GridColor = Color.FromArgb(255, 255, 255);
-            detalleGrid.Location = new Point(0, 0);
-            detalleGrid.Name = "detalleGrid";
-            detalleGrid.ReadOnly = true;
-            detalleGrid.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            detalleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            detalleGrid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            detalleGrid.RowTemplate.Height = 25;
-            detalleGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            detalleGrid.Size = new Size(552, 266);
-            detalleGrid.TabIndex = 2;
-            detalleGrid.UseStyleColors = true;
+            this.detalleGrid.AllowUserToAddRows = false;
+            this.detalleGrid.AllowUserToDeleteRows = false;
+            this.detalleGrid.AllowUserToResizeRows = false;
+            this.detalleGrid.AutoGenerateColumns = false;
+            this.detalleGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.detalleGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.detalleGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.detalleGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.detalleGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalleGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.detalleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detalleGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.tipoMedidaDataGridViewTextBoxColumn,
+            this.descuentoDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn});
+            this.detalleGrid.DataSource = this.detalleFacturaBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.detalleGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.detalleGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.detalleGrid.EnableHeadersVisualStyles = false;
+            this.detalleGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.detalleGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.detalleGrid.Location = new System.Drawing.Point(0, 0);
+            this.detalleGrid.Name = "detalleGrid";
+            this.detalleGrid.ReadOnly = true;
+            this.detalleGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.detalleGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.detalleGrid.RowTemplate.Height = 25;
+            this.detalleGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.detalleGrid.Size = new System.Drawing.Size(552, 266);
+            this.detalleGrid.TabIndex = 2;
+            this.detalleGrid.UseStyleColors = true;
+            this.detalleGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.detalleGrid_CellDoubleClick);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
-            codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            codigoDataGridViewTextBoxColumn.Visible = false;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
-            nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            nombreDataGridViewTextBoxColumn.HeaderText = "Producto";
-            nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // precioDataGridViewTextBoxColumn
             // 
-            precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            precioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
-            cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tipoMedidaDataGridViewTextBoxColumn
             // 
-            tipoMedidaDataGridViewTextBoxColumn.DataPropertyName = "TipoMedida";
-            tipoMedidaDataGridViewTextBoxColumn.HeaderText = "Medida";
-            tipoMedidaDataGridViewTextBoxColumn.Name = "tipoMedidaDataGridViewTextBoxColumn";
-            tipoMedidaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoMedidaDataGridViewTextBoxColumn.DataPropertyName = "TipoMedida";
+            this.tipoMedidaDataGridViewTextBoxColumn.HeaderText = "Medida";
+            this.tipoMedidaDataGridViewTextBoxColumn.Name = "tipoMedidaDataGridViewTextBoxColumn";
+            this.tipoMedidaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descuentoDataGridViewTextBoxColumn
             // 
-            descuentoDataGridViewTextBoxColumn.DataPropertyName = "descuento";
-            descuentoDataGridViewTextBoxColumn.HeaderText = "descuento";
-            descuentoDataGridViewTextBoxColumn.Name = "descuentoDataGridViewTextBoxColumn";
-            descuentoDataGridViewTextBoxColumn.ReadOnly = true;
-            descuentoDataGridViewTextBoxColumn.Visible = false;
+            this.descuentoDataGridViewTextBoxColumn.DataPropertyName = "descuento";
+            this.descuentoDataGridViewTextBoxColumn.HeaderText = "descuento";
+            this.descuentoDataGridViewTextBoxColumn.Name = "descuentoDataGridViewTextBoxColumn";
+            this.descuentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descuentoDataGridViewTextBoxColumn.Visible = false;
             // 
             // totalDataGridViewTextBoxColumn
             // 
-            totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descripcionDataGridViewTextBoxColumn
             // 
-            descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            descripcionDataGridViewTextBoxColumn.Visible = false;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Visible = false;
             // 
             // detalleFacturaBindingSource
             // 
-            detalleFacturaBindingSource.DataSource = typeof(Modelos.DetalleFactura);
+            this.detalleFacturaBindingSource.DataSource = typeof(FacturaDom.BDO.Modelos.DetalleFactura);
             // 
             // imprimirFactura
             // 
-            imprimirFactura.ActiveControl = null;
-            imprimirFactura.BackColor = Color.SteelBlue;
-            imprimirFactura.Location = new Point(19, 280);
-            imprimirFactura.Name = "imprimirFactura";
-            imprimirFactura.Size = new Size(114, 57);
-            imprimirFactura.TabIndex = 5;
-            imprimirFactura.Text = "Imprimir \r\nFactura";
-            imprimirFactura.TileImageAlign = ContentAlignment.MiddleRight;
-            imprimirFactura.UseCustomBackColor = true;
-            imprimirFactura.UseSelectable = true;
-            imprimirFactura.UseTileImage = true;
-            imprimirFactura.UseVisualStyleBackColor = false;
+            this.imprimirFactura.ActiveControl = null;
+            this.imprimirFactura.BackColor = System.Drawing.Color.SteelBlue;
+            this.imprimirFactura.Location = new System.Drawing.Point(19, 280);
+            this.imprimirFactura.Name = "imprimirFactura";
+            this.imprimirFactura.Size = new System.Drawing.Size(114, 57);
+            this.imprimirFactura.TabIndex = 5;
+            this.imprimirFactura.Text = "Terminar \r\npedido";
+            this.imprimirFactura.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imprimirFactura.UseCustomBackColor = true;
+            this.imprimirFactura.UseSelectable = true;
+            this.imprimirFactura.UseTileImage = true;
+            this.imprimirFactura.UseVisualStyleBackColor = false;
             // 
             // productosPanel
             // 
-            productosPanel.BackColor = Color.White;
-            productosPanel.Controls.Add(quitarArticulo);
-            productosPanel.Controls.Add(totalLbl);
-            productosPanel.Controls.Add(precioLbl);
-            productosPanel.Controls.Add(metroLabel8);
-            productosPanel.Controls.Add(metroLabel7);
-            productosPanel.Controls.Add(articuloNombre);
-            productosPanel.Controls.Add(metroLabel5);
-            productosPanel.Controls.Add(agregarArticulo);
-            productosPanel.Controls.Add(metroLabel4);
-            productosPanel.Controls.Add(cantidadArticulo);
-            productosPanel.Controls.Add(buscarArticulo);
-            productosPanel.HorizontalScrollbarBarColor = true;
-            productosPanel.HorizontalScrollbarHighlightOnWheel = false;
-            productosPanel.HorizontalScrollbarSize = 10;
-            productosPanel.Location = new Point(584, 206);
-            productosPanel.Name = "productosPanel";
-            productosPanel.Size = new Size(294, 348);
-            productosPanel.TabIndex = 1;
-            productosPanel.UseCustomBackColor = true;
-            productosPanel.VerticalScrollbarBarColor = true;
-            productosPanel.VerticalScrollbarHighlightOnWheel = false;
-            productosPanel.VerticalScrollbarSize = 10;
+            this.productosPanel.BackColor = System.Drawing.Color.White;
+            this.productosPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productosPanel.Controls.Add(this.quitarArticulo);
+            this.productosPanel.Controls.Add(this.totalLbl);
+            this.productosPanel.Controls.Add(this.precioLbl);
+            this.productosPanel.Controls.Add(this.metroLabel8);
+            this.productosPanel.Controls.Add(this.metroLabel7);
+            this.productosPanel.Controls.Add(this.articuloNombre);
+            this.productosPanel.Controls.Add(this.metroLabel5);
+            this.productosPanel.Controls.Add(this.agregarArticulo);
+            this.productosPanel.Controls.Add(this.metroLabel4);
+            this.productosPanel.Controls.Add(this.cantidadArticulo);
+            this.productosPanel.Controls.Add(this.buscarArticulo);
+            this.productosPanel.HorizontalScrollbarBarColor = true;
+            this.productosPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.productosPanel.HorizontalScrollbarSize = 10;
+            this.productosPanel.Location = new System.Drawing.Point(584, 206);
+            this.productosPanel.Name = "productosPanel";
+            this.productosPanel.Size = new System.Drawing.Size(294, 348);
+            this.productosPanel.TabIndex = 1;
+            this.productosPanel.UseCustomBackColor = true;
+            this.productosPanel.VerticalScrollbarBarColor = true;
+            this.productosPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.productosPanel.VerticalScrollbarSize = 10;
             // 
             // quitarArticulo
             // 
-            quitarArticulo.BackColor = Color.Red;
-            quitarArticulo.ForeColor = SystemColors.ControlLightLight;
-            quitarArticulo.Location = new Point(223, 138);
-            quitarArticulo.Name = "quitarArticulo";
-            quitarArticulo.Size = new Size(29, 29);
-            quitarArticulo.TabIndex = 16;
-            quitarArticulo.Text = "X";
-            quitarArticulo.UseCompatibleTextRendering = true;
-            quitarArticulo.UseCustomBackColor = true;
-            quitarArticulo.UseCustomForeColor = true;
-            quitarArticulo.UseSelectable = true;
-            quitarArticulo.UseVisualStyleBackColor = false;
-            quitarArticulo.Click += quitarArticulo_Click;
+            this.quitarArticulo.BackColor = System.Drawing.Color.Red;
+            this.quitarArticulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quitarArticulo.Location = new System.Drawing.Point(223, 138);
+            this.quitarArticulo.Name = "quitarArticulo";
+            this.quitarArticulo.Size = new System.Drawing.Size(29, 29);
+            this.quitarArticulo.TabIndex = 16;
+            this.quitarArticulo.Text = "X";
+            this.quitarArticulo.UseCompatibleTextRendering = true;
+            this.quitarArticulo.UseCustomBackColor = true;
+            this.quitarArticulo.UseCustomForeColor = true;
+            this.quitarArticulo.UseSelectable = true;
+            this.quitarArticulo.UseVisualStyleBackColor = false;
+            this.quitarArticulo.Click += new System.EventHandler(this.quitarArticulo_Click);
             // 
             // totalLbl
             // 
-            totalLbl.AutoSize = true;
-            totalLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            totalLbl.Location = new Point(91, 174);
-            totalLbl.Name = "totalLbl";
-            totalLbl.Size = new Size(43, 19);
-            totalLbl.TabIndex = 15;
-            totalLbl.Text = "RD$ -";
-            totalLbl.UseCustomBackColor = true;
+            this.totalLbl.AutoSize = true;
+            this.totalLbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.totalLbl.Location = new System.Drawing.Point(91, 174);
+            this.totalLbl.Name = "totalLbl";
+            this.totalLbl.Size = new System.Drawing.Size(43, 19);
+            this.totalLbl.TabIndex = 15;
+            this.totalLbl.Text = "RD$ -";
+            this.totalLbl.UseCustomBackColor = true;
             // 
             // precioLbl
             // 
-            precioLbl.AutoSize = true;
-            precioLbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            precioLbl.Location = new Point(101, 89);
-            precioLbl.Name = "precioLbl";
-            precioLbl.Size = new Size(43, 19);
-            precioLbl.TabIndex = 14;
-            precioLbl.Text = "RD$ -";
-            precioLbl.UseCustomBackColor = true;
+            this.precioLbl.AutoSize = true;
+            this.precioLbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.precioLbl.Location = new System.Drawing.Point(101, 89);
+            this.precioLbl.Name = "precioLbl";
+            this.precioLbl.Size = new System.Drawing.Size(43, 19);
+            this.precioLbl.TabIndex = 14;
+            this.precioLbl.Text = "RD$ -";
+            this.precioLbl.UseCustomBackColor = true;
             // 
             // metroLabel8
             // 
-            metroLabel8.AutoSize = true;
-            metroLabel8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel8.Location = new Point(46, 174);
-            metroLabel8.Name = "metroLabel8";
-            metroLabel8.Size = new Size(39, 19);
-            metroLabel8.TabIndex = 13;
-            metroLabel8.Text = "Total:";
-            metroLabel8.UseCustomBackColor = true;
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel8.Location = new System.Drawing.Point(46, 174);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel8.TabIndex = 13;
+            this.metroLabel8.Text = "Total:";
+            this.metroLabel8.UseCustomBackColor = true;
             // 
             // metroLabel7
             // 
-            metroLabel7.AutoSize = true;
-            metroLabel7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel7.Location = new Point(46, 89);
-            metroLabel7.Name = "metroLabel7";
-            metroLabel7.Size = new Size(49, 19);
-            metroLabel7.TabIndex = 12;
-            metroLabel7.Text = "Precio:";
-            metroLabel7.UseCustomBackColor = true;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel7.Location = new System.Drawing.Point(46, 89);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel7.TabIndex = 12;
+            this.metroLabel7.Text = "Precio:";
+            this.metroLabel7.UseCustomBackColor = true;
             // 
             // articuloNombre
             // 
-            articuloNombre.AutoSize = true;
-            articuloNombre.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            articuloNombre.Location = new Point(101, 63);
-            articuloNombre.Name = "articuloNombre";
-            articuloNombre.Size = new Size(15, 19);
-            articuloNombre.TabIndex = 11;
-            articuloNombre.Text = "-";
-            articuloNombre.UseCustomBackColor = true;
+            this.articuloNombre.AutoSize = true;
+            this.articuloNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.articuloNombre.Location = new System.Drawing.Point(101, 63);
+            this.articuloNombre.Name = "articuloNombre";
+            this.articuloNombre.Size = new System.Drawing.Size(15, 19);
+            this.articuloNombre.TabIndex = 11;
+            this.articuloNombre.Text = "-";
+            this.articuloNombre.UseCustomBackColor = true;
             // 
             // metroLabel5
             // 
-            metroLabel5.AutoSize = true;
-            metroLabel5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel5.Location = new Point(37, 63);
-            metroLabel5.Name = "metroLabel5";
-            metroLabel5.Size = new Size(58, 19);
-            metroLabel5.TabIndex = 10;
-            metroLabel5.Text = "Articulo:";
-            metroLabel5.UseCustomBackColor = true;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel5.Location = new System.Drawing.Point(37, 63);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(58, 19);
+            this.metroLabel5.TabIndex = 10;
+            this.metroLabel5.Text = "Articulo:";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // agregarArticulo
             // 
-            agregarArticulo.ActiveControl = null;
-            agregarArticulo.BackColor = Color.SteelBlue;
-            agregarArticulo.Enabled = false;
-            agregarArticulo.Location = new Point(157, 227);
-            agregarArticulo.Name = "agregarArticulo";
-            agregarArticulo.Size = new Size(114, 59);
-            agregarArticulo.TabIndex = 5;
-            agregarArticulo.Text = "Agregar\r\nArticulo";
-            agregarArticulo.TileImageAlign = ContentAlignment.MiddleRight;
-            agregarArticulo.UseCustomBackColor = true;
-            agregarArticulo.UseSelectable = true;
-            agregarArticulo.UseTileImage = true;
-            agregarArticulo.UseVisualStyleBackColor = false;
-            agregarArticulo.Click += agregarArticulo_Click;
+            this.agregarArticulo.ActiveControl = null;
+            this.agregarArticulo.BackColor = System.Drawing.Color.SteelBlue;
+            this.agregarArticulo.Enabled = false;
+            this.agregarArticulo.Location = new System.Drawing.Point(157, 227);
+            this.agregarArticulo.Name = "agregarArticulo";
+            this.agregarArticulo.Size = new System.Drawing.Size(114, 59);
+            this.agregarArticulo.TabIndex = 5;
+            this.agregarArticulo.Text = "Agregar\r\nArticulo";
+            this.agregarArticulo.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.agregarArticulo.UseCustomBackColor = true;
+            this.agregarArticulo.UseSelectable = true;
+            this.agregarArticulo.UseTileImage = true;
+            this.agregarArticulo.UseVisualStyleBackColor = false;
+            this.agregarArticulo.Click += new System.EventHandler(this.agregarArticulo_Click);
             // 
             // metroLabel4
             // 
-            metroLabel4.AutoSize = true;
-            metroLabel4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            metroLabel4.Location = new Point(37, 114);
-            metroLabel4.Name = "metroLabel4";
-            metroLabel4.Size = new Size(62, 19);
-            metroLabel4.TabIndex = 9;
-            metroLabel4.Text = "Cantidad";
-            metroLabel4.UseCustomBackColor = true;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel4.Location = new System.Drawing.Point(37, 114);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel4.TabIndex = 9;
+            this.metroLabel4.Text = "Cantidad";
+            this.metroLabel4.UseCustomBackColor = true;
             // 
             // cantidadArticulo
             // 
-            cantidadArticulo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cantidadArticulo.Location = new Point(37, 138);
-            cantidadArticulo.Name = "cantidadArticulo";
-            cantidadArticulo.Size = new Size(180, 33);
-            cantidadArticulo.TabIndex = 8;
-            cantidadArticulo.Text = "0";
-            cantidadArticulo.TextChanged += cantidadArticulo_TextChanged;
+            this.cantidadArticulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cantidadArticulo.Location = new System.Drawing.Point(37, 138);
+            this.cantidadArticulo.Name = "cantidadArticulo";
+            this.cantidadArticulo.Size = new System.Drawing.Size(180, 33);
+            this.cantidadArticulo.TabIndex = 8;
+            this.cantidadArticulo.Text = "0";
+            this.cantidadArticulo.TextChanged += new System.EventHandler(this.cantidadArticulo_TextChanged);
             // 
             // buscarArticulo
             // 
-            buscarArticulo.ActiveControl = null;
-            buscarArticulo.BackColor = Color.SteelBlue;
-            buscarArticulo.Location = new Point(37, 227);
-            buscarArticulo.Name = "buscarArticulo";
-            buscarArticulo.Size = new Size(114, 59);
-            buscarArticulo.TabIndex = 4;
-            buscarArticulo.Text = "Buscar\r\nArticulo";
-            buscarArticulo.TileImageAlign = ContentAlignment.MiddleRight;
-            buscarArticulo.UseCustomBackColor = true;
-            buscarArticulo.UseSelectable = true;
-            buscarArticulo.UseTileImage = true;
-            buscarArticulo.UseVisualStyleBackColor = false;
-            buscarArticulo.Click += buscarArticulo_Click;
+            this.buscarArticulo.ActiveControl = null;
+            this.buscarArticulo.BackColor = System.Drawing.Color.SteelBlue;
+            this.buscarArticulo.Location = new System.Drawing.Point(37, 227);
+            this.buscarArticulo.Name = "buscarArticulo";
+            this.buscarArticulo.Size = new System.Drawing.Size(114, 59);
+            this.buscarArticulo.TabIndex = 4;
+            this.buscarArticulo.Text = "Buscar\r\nArticulo";
+            this.buscarArticulo.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buscarArticulo.UseCustomBackColor = true;
+            this.buscarArticulo.UseSelectable = true;
+            this.buscarArticulo.UseTileImage = true;
+            this.buscarArticulo.UseVisualStyleBackColor = false;
+            this.buscarArticulo.Click += new System.EventHandler(this.buscarArticulo_Click);
             // 
             // articuloBindingSource
             // 
-            articuloBindingSource.DataSource = typeof(Modelos.Articulo);
+            this.articuloBindingSource.DataSource = typeof(FacturaDom.BDO.Modelos.Articulo);
             // 
             // nuevaFactura
             // 
-            nuevaFactura.ActiveControl = null;
-            nuevaFactura.BackColor = Color.SteelBlue;
-            nuevaFactura.Location = new Point(764, 75);
-            nuevaFactura.Name = "nuevaFactura";
-            nuevaFactura.Size = new Size(114, 110);
-            nuevaFactura.TabIndex = 4;
-            nuevaFactura.Text = "Nueva\r\nFactura";
-            nuevaFactura.TileImageAlign = ContentAlignment.TopRight;
-            nuevaFactura.UseCustomBackColor = true;
-            nuevaFactura.UseSelectable = true;
-            nuevaFactura.UseTileImage = true;
-            nuevaFactura.UseVisualStyleBackColor = false;
-            nuevaFactura.Click += nuevaFactura_Click;
+            this.nuevaFactura.ActiveControl = null;
+            this.nuevaFactura.BackColor = System.Drawing.Color.SteelBlue;
+            this.nuevaFactura.Location = new System.Drawing.Point(764, 75);
+            this.nuevaFactura.Name = "nuevaFactura";
+            this.nuevaFactura.Size = new System.Drawing.Size(114, 110);
+            this.nuevaFactura.TabIndex = 4;
+            this.nuevaFactura.Text = "Nueva\r\nFactura";
+            this.nuevaFactura.TileImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.nuevaFactura.UseCustomBackColor = true;
+            this.nuevaFactura.UseSelectable = true;
+            this.nuevaFactura.UseTileImage = true;
+            this.nuevaFactura.UseVisualStyleBackColor = false;
+            this.nuevaFactura.Click += new System.EventHandler(this.nuevaFactura_Click);
             // 
             // eliminarFactura
             // 
-            eliminarFactura.ActiveControl = null;
-            eliminarFactura.BackColor = Color.SteelBlue;
-            eliminarFactura.Location = new Point(26, 75);
-            eliminarFactura.Name = "eliminarFactura";
-            eliminarFactura.Size = new Size(114, 110);
-            eliminarFactura.TabIndex = 6;
-            eliminarFactura.Text = "Eliminar";
-            eliminarFactura.TileImageAlign = ContentAlignment.TopRight;
-            eliminarFactura.UseCustomBackColor = true;
-            eliminarFactura.UseSelectable = true;
-            eliminarFactura.UseTileImage = true;
-            eliminarFactura.UseVisualStyleBackColor = false;
-            eliminarFactura.Click += eliminarFactura_Click;
+            this.eliminarFactura.ActiveControl = null;
+            this.eliminarFactura.BackColor = System.Drawing.Color.SteelBlue;
+            this.eliminarFactura.Location = new System.Drawing.Point(26, 75);
+            this.eliminarFactura.Name = "eliminarFactura";
+            this.eliminarFactura.Size = new System.Drawing.Size(114, 110);
+            this.eliminarFactura.TabIndex = 6;
+            this.eliminarFactura.Text = "Eliminar";
+            this.eliminarFactura.TileImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.eliminarFactura.UseCustomBackColor = true;
+            this.eliminarFactura.UseSelectable = true;
+            this.eliminarFactura.UseTileImage = true;
+            this.eliminarFactura.UseVisualStyleBackColor = false;
+            this.eliminarFactura.Click += new System.EventHandler(this.eliminarFactura_Click);
             // 
             // clientePanel
             // 
-            clientePanel.BackColor = Color.White;
-            clientePanel.Controls.Add(direccionLbl);
-            clientePanel.Controls.Add(clienteLbl);
-            clientePanel.Controls.Add(codigoLbl);
-            clientePanel.Controls.Add(metroLabel10);
-            clientePanel.Controls.Add(metroLabel9);
-            clientePanel.Controls.Add(metroLabel6);
-            clientePanel.HorizontalScrollbarBarColor = true;
-            clientePanel.HorizontalScrollbarHighlightOnWheel = false;
-            clientePanel.HorizontalScrollbarSize = 10;
-            clientePanel.Location = new Point(152, 75);
-            clientePanel.Name = "clientePanel";
-            clientePanel.Size = new Size(600, 110);
-            clientePanel.TabIndex = 7;
-            clientePanel.UseCustomBackColor = true;
-            clientePanel.VerticalScrollbarBarColor = true;
-            clientePanel.VerticalScrollbarHighlightOnWheel = false;
-            clientePanel.VerticalScrollbarSize = 10;
+            this.clientePanel.BackColor = System.Drawing.Color.White;
+            this.clientePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.clientePanel.Controls.Add(this.direccionLbl);
+            this.clientePanel.Controls.Add(this.clienteLbl);
+            this.clientePanel.Controls.Add(this.codigoLbl);
+            this.clientePanel.Controls.Add(this.metroLabel10);
+            this.clientePanel.Controls.Add(this.metroLabel9);
+            this.clientePanel.Controls.Add(this.metroLabel6);
+            this.clientePanel.HorizontalScrollbarBarColor = true;
+            this.clientePanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.clientePanel.HorizontalScrollbarSize = 10;
+            this.clientePanel.Location = new System.Drawing.Point(152, 75);
+            this.clientePanel.Name = "clientePanel";
+            this.clientePanel.Size = new System.Drawing.Size(600, 110);
+            this.clientePanel.TabIndex = 7;
+            this.clientePanel.UseCustomBackColor = true;
+            this.clientePanel.VerticalScrollbarBarColor = true;
+            this.clientePanel.VerticalScrollbarHighlightOnWheel = false;
+            this.clientePanel.VerticalScrollbarSize = 10;
             // 
             // direccionLbl
             // 
-            direccionLbl.AutoSize = true;
-            direccionLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            direccionLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            direccionLbl.Location = new Point(109, 74);
-            direccionLbl.Name = "direccionLbl";
-            direccionLbl.Size = new Size(19, 25);
-            direccionLbl.TabIndex = 12;
-            direccionLbl.Text = "-";
-            direccionLbl.UseCustomBackColor = true;
+            this.direccionLbl.AutoSize = true;
+            this.direccionLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.direccionLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.direccionLbl.Location = new System.Drawing.Point(109, 74);
+            this.direccionLbl.Name = "direccionLbl";
+            this.direccionLbl.Size = new System.Drawing.Size(19, 25);
+            this.direccionLbl.TabIndex = 12;
+            this.direccionLbl.Text = "-";
+            this.direccionLbl.UseCustomBackColor = true;
             // 
             // clienteLbl
             // 
-            clienteLbl.AutoSize = true;
-            clienteLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            clienteLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            clienteLbl.Location = new Point(109, 39);
-            clienteLbl.Name = "clienteLbl";
-            clienteLbl.Size = new Size(19, 25);
-            clienteLbl.TabIndex = 11;
-            clienteLbl.Text = "-";
-            clienteLbl.UseCustomBackColor = true;
+            this.clienteLbl.AutoSize = true;
+            this.clienteLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.clienteLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.clienteLbl.Location = new System.Drawing.Point(109, 39);
+            this.clienteLbl.Name = "clienteLbl";
+            this.clienteLbl.Size = new System.Drawing.Size(19, 25);
+            this.clienteLbl.TabIndex = 11;
+            this.clienteLbl.Text = "-";
+            this.clienteLbl.UseCustomBackColor = true;
             // 
             // codigoLbl
             // 
-            codigoLbl.AutoSize = true;
-            codigoLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            codigoLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            codigoLbl.Location = new Point(109, 7);
-            codigoLbl.Name = "codigoLbl";
-            codigoLbl.Size = new Size(19, 25);
-            codigoLbl.TabIndex = 10;
-            codigoLbl.Text = "-";
-            codigoLbl.UseCustomBackColor = true;
+            this.codigoLbl.AutoSize = true;
+            this.codigoLbl.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.codigoLbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.codigoLbl.Location = new System.Drawing.Point(109, 7);
+            this.codigoLbl.Name = "codigoLbl";
+            this.codigoLbl.Size = new System.Drawing.Size(19, 25);
+            this.codigoLbl.TabIndex = 10;
+            this.codigoLbl.Text = "-";
+            this.codigoLbl.UseCustomBackColor = true;
             // 
             // metroLabel10
             // 
-            metroLabel10.AutoSize = true;
-            metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel10.Location = new Point(14, 7);
-            metroLabel10.Name = "metroLabel10";
-            metroLabel10.Size = new Size(90, 25);
-            metroLabel10.TabIndex = 9;
-            metroLabel10.Text = "Factura #";
-            metroLabel10.UseCustomBackColor = true;
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel10.Location = new System.Drawing.Point(14, 7);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(90, 25);
+            this.metroLabel10.TabIndex = 9;
+            this.metroLabel10.Text = "Factura #";
+            this.metroLabel10.UseCustomBackColor = true;
             // 
             // metroLabel9
             // 
-            metroLabel9.AutoSize = true;
-            metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel9.Location = new Point(3, 74);
-            metroLabel9.Name = "metroLabel9";
-            metroLabel9.Size = new Size(102, 25);
-            metroLabel9.TabIndex = 8;
-            metroLabel9.Text = "Direccion :";
-            metroLabel9.UseCustomBackColor = true;
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 74);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(102, 25);
+            this.metroLabel9.TabIndex = 8;
+            this.metroLabel9.Text = "Direccion :";
+            this.metroLabel9.UseCustomBackColor = true;
             // 
             // metroLabel6
             // 
-            metroLabel6.AutoSize = true;
-            metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            metroLabel6.Location = new Point(22, 39);
-            metroLabel6.Name = "metroLabel6";
-            metroLabel6.Size = new Size(81, 25);
-            metroLabel6.TabIndex = 7;
-            metroLabel6.Text = "Cliente :";
-            metroLabel6.UseCustomBackColor = true;
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(22, 39);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(81, 25);
+            this.metroLabel6.TabIndex = 7;
+            this.metroLabel6.Text = "Cliente :";
+            this.metroLabel6.UseCustomBackColor = true;
             // 
             // facturaBox
             // 
-            facturaBox.BackColor = Color.FromArgb(255, 255, 255);
-            facturaBox.ForeColor = Color.SteelBlue;
-            facturaBox.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            facturaBox.IconColor = Color.SteelBlue;
-            facturaBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            facturaBox.IconSize = 218;
-            facturaBox.Location = new Point(323, 208);
-            facturaBox.Name = "facturaBox";
-            facturaBox.Size = new Size(255, 218);
-            facturaBox.TabIndex = 8;
-            facturaBox.TabStop = false;
-            facturaBox.Click += facturaBox_Click;
+            this.facturaBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.facturaBox.ForeColor = System.Drawing.Color.SteelBlue;
+            this.facturaBox.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.facturaBox.IconColor = System.Drawing.Color.SteelBlue;
+            this.facturaBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.facturaBox.IconSize = 218;
+            this.facturaBox.Location = new System.Drawing.Point(323, 208);
+            this.facturaBox.Name = "facturaBox";
+            this.facturaBox.Size = new System.Drawing.Size(255, 218);
+            this.facturaBox.TabIndex = 8;
+            this.facturaBox.TabStop = false;
             // 
             // Factura
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(901, 577);
-            Controls.Add(clientePanel);
-            Controls.Add(eliminarFactura);
-            Controls.Add(nuevaFactura);
-            Controls.Add(productosPanel);
-            Controls.Add(facturarPanel);
-            Controls.Add(facturaBox);
-            Name = "Factura";
-            Text = "Facturar";
-            Load += Factura_Load;
-            facturarPanel.ResumeLayout(false);
-            facturarPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)detalleGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)detalleFacturaBindingSource).EndInit();
-            productosPanel.ResumeLayout(false);
-            productosPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)articuloBindingSource).EndInit();
-            clientePanel.ResumeLayout(false);
-            clientePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)facturaBox).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(901, 577);
+            this.Controls.Add(this.clientePanel);
+            this.Controls.Add(this.eliminarFactura);
+            this.Controls.Add(this.nuevaFactura);
+            this.Controls.Add(this.productosPanel);
+            this.Controls.Add(this.facturarPanel);
+            this.Controls.Add(this.facturaBox);
+            this.Name = "Factura";
+            this.Text = "Facturar";
+            this.Load += new System.EventHandler(this.Factura_Load);
+            this.facturarPanel.ResumeLayout(false);
+            this.facturarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleFacturaBindingSource)).EndInit();
+            this.productosPanel.ResumeLayout(false);
+            this.productosPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
+            this.clientePanel.ResumeLayout(false);
+            this.clientePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBox)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private MetroFramework.Controls.MetroPanel facturarPanel;
         private MetroFramework.Controls.MetroPanel productosPanel;
-        private MetroFramework.Controls.MetroLabel articulosCantidad;
+        private MetroFramework.Controls.MetroLabel articuloCantidad;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel totalRds;
         private MetroFramework.Controls.MetroLabel metroLabel1;

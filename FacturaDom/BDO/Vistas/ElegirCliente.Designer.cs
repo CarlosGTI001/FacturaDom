@@ -221,6 +221,7 @@
             this.busquedaText.Name = "busquedaText";
             this.busquedaText.Size = new System.Drawing.Size(180, 33);
             this.busquedaText.TabIndex = 8;
+            this.busquedaText.TextChanged += new System.EventHandler(this.busquedaText_TextChanged);
             // 
             // elegir_Cliente
             // 
