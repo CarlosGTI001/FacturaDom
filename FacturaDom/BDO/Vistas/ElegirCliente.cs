@@ -37,9 +37,12 @@ namespace FacturaDom.BDO.Vistas
         string Cedula;
         private void clienteGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            elegir_Cliente.Show();
-            Cedula = clienteGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-            busquedaText.Text = Cedula;
+            if(e.RowIndex > -1) {
+                elegir_Cliente.Show();
+                Cedula = clienteGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                busquedaText.Text = Cedula;
+            }
+            
         }
 
         private void busquedaText_TextChanged(object sender, EventArgs e)

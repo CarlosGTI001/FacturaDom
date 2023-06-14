@@ -50,7 +50,7 @@ namespace FacturaDom.BDO.Controladores
                     Usuario = usuario,
                     FechaMovimiento = DateTime.Now,
                     Cantidad = cantidad,
-                    Tipo = "Entrada"
+                    Tipo = "Salida"
                 };
                 context.Movimientos.Add(movimiento);
                 context.SaveChanges();

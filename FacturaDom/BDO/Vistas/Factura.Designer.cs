@@ -596,6 +596,7 @@
             Controls.Add(facturaBox);
             Name = "Factura";
             Text = "Facturar";
+            FormClosing += Factura_FormClosing;
             Load += Factura_Load;
             facturarPanel.ResumeLayout(false);
             facturarPanel.PerformLayout();

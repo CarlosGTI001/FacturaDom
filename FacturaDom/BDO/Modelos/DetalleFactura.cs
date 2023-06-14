@@ -22,5 +22,15 @@ namespace FacturaDom.BDO.Modelos
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Total { get; set; }
+        public string CodigoFactura { get; set; }
+        public string _Codigo { get; set; }
+        public string? _Nombre { get; set; }
+        public string? _Descripcion { get; set; }
+
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal _Precio { get; set; }
+        public decimal _Stock { get; set; }
+        public string _TipoMedida { get; set; }
     }
 }

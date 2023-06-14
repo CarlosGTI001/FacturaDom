@@ -135,7 +135,13 @@ namespace FacturaDom.BDO.Vistas
 
         private void historialFactura_Click(object sender, EventArgs e)
         {
+            FacturasHistorial fHistorial = new FacturasHistorial();
+            this.Hide();
 
+            if(fHistorial.ShowDialog() != null)
+            {
+                this.Show();
+            }
         }
 
         private void historialSesiones_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using FacturaDom.BDO.Modelos;
 using FacturaDom.Data;
 using FontAwesome.Sharp;
 using MetroFramework.Forms;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,7 @@ namespace FacturaDom.BDO.Vistas
     public partial class Factura : MetroForm
     {
         public string clienteCedula;
-        clienteController clienteController = new clienteController();
-
+        //clienteController clienteController = new clienteController();
         public Factura()
         {
             InitializeComponent();
@@ -41,35 +41,60 @@ namespace FacturaDom.BDO.Vistas
 
         public Cliente cliente;
         facturaController facturaController = new facturaController();
-        public Modelos.Factura factura;
-
+        public Modelos.Factura factura = null;
+        public FacturaTemporal datosTemporales;
         private void nuevaFactura_Click(object sender, EventArgs e)
         {
+            //cliente = null;
+            //DBDataContext.Instance.Database.BeginTransaction();
             ElegirCliente elegirCliente = new ElegirCliente(this);
+            
+
+            
             if (elegirCliente.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(clienteCedula))
             {
                 facturarPanel.Show();
                 clientePanel.Show();
                 productosPanel.Show();
-                cliente = clienteController.obtenerCliente(clienteCedula);
+                cliente = DBDataContext.Instance.Clientes.Find(clienteCedula);
                 clienteLbl.Text = cliente.Nombre + " " + cliente.Apellido + " (Cedula: " + cliente.Cedula + ")";
                 facturaBox.Hide();
-                var numero = facturaController.obtenerFacturas().Count() + 1;
-                codigoLbl.Text = numero.ToString().PadLeft(6, '0');
+                var resultado = true;
+                while(resultado = true)
+                {
+                    var aleatorio = new Random().Next(100000, 999999);
+
+                    if (DBDataContext.Instance.Factura.Find(aleatorio.ToString()) == null)
+                    {
+                        codigoLbl.Text = aleatorio.ToString();
+                        break;
+                    }
+                }
                 direccionLbl.Text = cliente.Direccion;
-                factura = new Modelos.Factura
+                datosTemporales = new FacturaTemporal();
+                datosTemporales.factura = new Modelos.Factura
                 {
                     CodigoFactura = codigoLbl.Text,
                     CodigoCliente = cliente.Cedula,
                     UserCode = UserSession.Instance.UserCode,
                     UserName = UserSession.Instance.UserName
                 };
-                DBDataContext.Instance.Factura.Add(factura);
-                DBDataContext.Instance.SaveChanges();
+                foreach(var articunos in DBDataContext.Instance.Articulo.ToList())
+                {
+                    datosTemporales.articulosTemporales.Add(new articulosTemporales
+                    {
+                        Nombre = articunos.Nombre,
+                        Codigo = articunos.Codigo,
+                        Descripcion = articunos.Descripcion,
+                        Precio = articunos.Precio,
+                        Stock = articunos.Stock,
+                        TipoMedida = articunos.TipoMedida
+                    });
+                }
+                //DBDataContext.Instance.Factura.Add(factura);
                 nuevaFactura.Hide();
                 eliminarFactura.Show();
             }
-
         }
 
         private void facturaBox_Click(object sender, EventArgs e)
@@ -79,7 +104,7 @@ namespace FacturaDom.BDO.Vistas
 
         private void eliminarFactura_Click(object sender, EventArgs e)
         {
-            logon logon = new logon();
+            
             alerta alerta = new alerta();
             alerta.Text = "Aviso";
             var iconImage = IconChar.QuestionCircle.ToBitmap(size: 128, color: Color.Blue, iconFont: IconFont.Auto);
@@ -88,14 +113,18 @@ namespace FacturaDom.BDO.Vistas
             var a = alerta.ShowDialog();
             if (a == DialogResult.OK)
             {
-                DBDataContext.Instance.Factura.Remove(factura);
-                DBDataContext.Instance.SaveChanges();
+                datosTemporales = new FacturaTemporal();
+                //DBDataContext.Instance.Factura.Remove(factura);
+                //DBDataContext.Instance.Dispose();
+                //DBDataContext.Instance.Database.RollbackTransaction();
                 facturarPanel.Hide();
                 clientePanel.Hide();
                 productosPanel.Hide();
                 eliminarFactura.Hide();
                 clienteLbl.Text = "-";
+                detalleGrid.DataSource = "";
                 cliente = null;
+                factura = null;
                 codigoLbl.Text = "-";
                 direccionLbl.Text = "-";
                 nuevaFactura.Show();
@@ -105,14 +134,13 @@ namespace FacturaDom.BDO.Vistas
             {
                 alerta.Close();
             }
-
-            
         }
 
         private void agregarArticulo_Click(object sender, EventArgs e)
         {
             if (articulo.Stock >= decimal.Parse(cantidadArticulo.Text))
             {
+                
                 detalle.Add(new DetalleFactura
                 {
                     Codigo = "DET" + articulo.Codigo + detalle.Count() + DateTime.Now.ToString("ddMMyymmss"),
@@ -121,9 +149,18 @@ namespace FacturaDom.BDO.Vistas
                     Precio = articulo.Precio,
                     TipoMedida = articulo.TipoMedida,
                     Cantidad = decimal.Parse(cantidadArticulo.Text),
-                    Total = decimal.Parse(totalLbl.Text.Replace("RD$", ""))
+                    Total = decimal.Parse(totalLbl.Text.Replace("RD$", "")),
+                    _Codigo = articulo.Codigo,
+                    _Nombre = articulo.Nombre,
+                    _Descripcion = articulo.Descripcion,
+                    _Precio = articulo.Precio,
+                    _Stock = articulo.Stock,
+                    _TipoMedida = articulo.TipoMedida
                 });
 
+                datosTemporales.articulosTemporales.Where(a=>a.Codigo == articulo.Codigo.Replace("#","")).First().Stock -= decimal.Parse(cantidadArticulo.Text);
+                //DBDataContext.Instance.Articulo.Find(articulo.Codigo).Stock -= decimal.Parse(cantidadArticulo.Text);
+                //DBDataContext.Instance.SaveChanges();
                 totalRds.Text = "RD$" + detalle.Sum(a => a.Total);
                 articuloCantidad.Text = detalle.Count().ToString();
                 cantidadArticulo.Text = "0";
@@ -133,18 +170,23 @@ namespace FacturaDom.BDO.Vistas
             }
             else
             {
-
+                alerta alerta = new alerta();
+                alerta.Text = "Aviso";
+                var iconImage = IconChar.QuestionCircle.ToBitmap(size: 128, color: Color.Blue, iconFont: IconFont.Auto);
+                alerta.icon.Image = iconImage;
+                alerta.label1.Text = "El stock disponible no satisface la peticion";
+                var a = alerta.ShowDialog();
             }
         }
 
         public List<Modelos.DetalleFactura> detalle = new List<DetalleFactura>();
-        public Modelos.Articulo articulo;
-
-
+        public Modelos.articulosTemporales articulo;
+        private IDbContextTransaction tx;
 
         private void buscarArticulo_Click(object sender, EventArgs e)
         {
-            ElegirArticulo elegirArticulo = new ElegirArticulo(this);
+            
+            ElegirArticulo elegirArticulo = new ElegirArticulo(this, datosTemporales.articulosTemporales);
 
             if (elegirArticulo.ShowDialog() == DialogResult.OK)
             {
@@ -204,7 +246,60 @@ namespace FacturaDom.BDO.Vistas
 
         private void imprimirFactura_Click(object sender, EventArgs e)
         {
+            if(detalle.Count() > 0)
+            {
+                TerminarPedido term = new TerminarPedido(detalle,datosTemporales.factura, this, cliente);
+                if (term.ShowDialog() == DialogResult.OK)
+                {
+                    term.Hide();
+                    detalle = new List<DetalleFactura>();
+                    facturarPanel.Hide();
+                    clientePanel.Hide();
+                    productosPanel.Hide();
+                    eliminarFactura.Hide();
+                    clienteLbl.Text = "-";
+                    cliente = null;
+                    factura = null;
+                    codigoLbl.Text = "-";
+                    direccionLbl.Text = "-";
+                    nuevaFactura.Show();
+                    facturaBox.Show();
+                    detalleGrid.DataSource = "";
+                }
+            }
+        }
 
+        private void Factura_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(factura != null)
+            {
+                alerta alerta = new alerta();
+                alerta.Text = "Aviso";
+                var iconImage = IconChar.QuestionCircle.ToBitmap(size: 128, color: Color.Blue, iconFont: IconFont.Auto);
+                alerta.icon.Image = iconImage;
+                alerta.label1.Text = "En realidad desea salir y eliminar la factura?";
+                var a = alerta.ShowDialog();
+
+                if (a == DialogResult.OK)
+                {
+                    try 
+                    {
+                        DialogResult = DialogResult.OK;
+                        detalleGrid.DataSource = "";
+                        detalle = new List<DetalleFactura>();
+                        datosTemporales = new FacturaTemporal();
+                    }
+                    catch
+                    {
+                        datosTemporales = new FacturaTemporal();
+                    }
+                }
+                else
+                {
+                    alerta.Close();
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

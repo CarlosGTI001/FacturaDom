@@ -23,7 +23,6 @@ namespace FacturaDom.BDO.Vistas
 
         private void HistorialInventario_Load(object sender, EventArgs e)
         {
-            filtrarProducto.TileImage = IconChar.Search.ToBitmap(Color.White, 32);
             movimientoGrid.DataSource = articulos.obtenerHistorial();
         }
     }

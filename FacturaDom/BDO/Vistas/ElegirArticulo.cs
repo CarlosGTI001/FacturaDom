@@ -16,30 +16,44 @@ namespace FacturaDom.BDO.Vistas
 {
     public partial class ElegirArticulo : MetroForm
     {
-        articulosController articulosController = new articulosController();
         Factura Factura;
-        public ElegirArticulo(Factura _Factura)
+        List<articulosTemporales> articulos;
+        public ElegirArticulo(Factura _Factura, List<articulosTemporales> _articulos)
         {
+            articulos = _articulos;
+            
             Factura = _Factura;
             InitializeComponent();
         }
-        Articulo Articulo = new Articulo();
+        articulosTemporales Articulo = new articulosTemporales();
         internal string Busqueda;
 
         private void ElegirArticulo_Load(object sender, EventArgs e)
         {
-            articuloGrid.DataSource = articulosController.obtenerArticulos().Where(a => a.Stock > 0).ToList();
+            articuloGrid.DataSource = articulos.Where(a => a.Stock > 0 && !a.Codigo.Contains("#")).ToList();
         }
 
         private void articuloGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Articulo = articulosController.obtenerArticulos()
+            var articulo = articulos
                 .Where(a => a.Codigo.Equals(articuloGrid
                 .Rows[e.RowIndex]
                 .Cells[0]
                 .Value
                 .ToString())).FirstOrDefault();
+
             busquedaText.Text = Articulo.Codigo;
+            Articulo = new articulosTemporales
+            {
+                Nombre = articulo.Nombre,
+                Codigo = articulo.Codigo + "#",
+                Descripcion = articulo.Descripcion,
+                Precio = articulo.Precio,
+                Stock = articulo.Stock,
+                TipoMedida = articulo.TipoMedida
+            };
+            articulo = null;
+            cantidadDisponible.Text = Articulo.Stock + " " + Articulo.TipoMedida;
         }
 
         private void elegir_Articulo_Click(object sender, EventArgs e)
@@ -50,14 +64,12 @@ namespace FacturaDom.BDO.Vistas
 
         private void busquedaText_TextChanged(object sender, EventArgs e)
         {
-            articuloGrid.DataSource = articulosController
-                .obtenerArticulos()
+            articuloGrid.DataSource = articulos
                 .Where(a => a.Stock > 0)
-                .Where(a=>a.Codigo
+                .Where(a => a.Codigo
                 .Contains(busquedaText.Text) || a.Nombre
-                .Contains(busquedaText.Text))
+                .Contains(busquedaText.Text) && !a.Codigo.Contains("#"))
                 .ToList();
-
         }
     }
 }

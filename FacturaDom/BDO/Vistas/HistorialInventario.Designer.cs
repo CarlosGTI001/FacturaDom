@@ -33,13 +33,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             movimientoGrid = new MetroFramework.Controls.MetroGrid();
-            movimientoInventarioBindingSource = new BindingSource(components);
-            deTime = new MetroFramework.Controls.MetroDateTime();
-            hastaTime = new MetroFramework.Controls.MetroDateTime();
-            filtrarProducto = new MetroFramework.Controls.MetroTile();
-            metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            movimientoInventarioBindingSource1 = new BindingSource(components);
             movimientoIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             codigoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -48,9 +41,11 @@
             fechaMovimientoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             cantidadDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             userNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            movimientoInventarioBindingSource1 = new BindingSource(components);
+            movimientoInventarioBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)movimientoGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource).BeginInit();
             SuspendLayout();
             // 
             // movimientoGrid
@@ -103,63 +98,6 @@
             movimientoGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             movimientoGrid.Size = new Size(754, 254);
             movimientoGrid.TabIndex = 0;
-            // 
-            // movimientoInventarioBindingSource
-            // 
-            movimientoInventarioBindingSource.DataSource = typeof(Data.MovimientoInventario);
-            // 
-            // deTime
-            // 
-            deTime.Location = new Point(444, 83);
-            deTime.MinimumSize = new Size(0, 29);
-            deTime.Name = "deTime";
-            deTime.Size = new Size(200, 29);
-            deTime.TabIndex = 1;
-            // 
-            // hastaTime
-            // 
-            hastaTime.Location = new Point(444, 118);
-            hastaTime.MinimumSize = new Size(0, 29);
-            hastaTime.Name = "hastaTime";
-            hastaTime.Size = new Size(200, 29);
-            hastaTime.TabIndex = 2;
-            // 
-            // filtrarProducto
-            // 
-            filtrarProducto.ActiveControl = null;
-            filtrarProducto.BackColor = Color.SteelBlue;
-            filtrarProducto.BackgroundImageLayout = ImageLayout.Stretch;
-            filtrarProducto.Location = new Point(663, 83);
-            filtrarProducto.Name = "filtrarProducto";
-            filtrarProducto.Size = new Size(114, 64);
-            filtrarProducto.TabIndex = 10;
-            filtrarProducto.Text = "Filtrar";
-            filtrarProducto.UseCustomBackColor = true;
-            filtrarProducto.UseSelectable = true;
-            filtrarProducto.UseTileImage = true;
-            filtrarProducto.UseVisualStyleBackColor = false;
-            // 
-            // metroLabel1
-            // 
-            metroLabel1.AutoSize = true;
-            metroLabel1.Location = new Point(386, 93);
-            metroLabel1.Name = "metroLabel1";
-            metroLabel1.Size = new Size(52, 19);
-            metroLabel1.TabIndex = 11;
-            metroLabel1.Text = "Desde: ";
-            // 
-            // metroLabel2
-            // 
-            metroLabel2.AutoSize = true;
-            metroLabel2.Location = new Point(386, 128);
-            metroLabel2.Name = "metroLabel2";
-            metroLabel2.Size = new Size(48, 19);
-            metroLabel2.TabIndex = 12;
-            metroLabel2.Text = "Hasta: ";
-            // 
-            // movimientoInventarioBindingSource1
-            // 
-            movimientoInventarioBindingSource1.DataSource = typeof(Data.MovimientoInventario);
             // 
             // movimientoIdDataGridViewTextBoxColumn
             // 
@@ -219,35 +157,32 @@
             userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
             userNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // movimientoInventarioBindingSource1
+            // 
+            movimientoInventarioBindingSource1.DataSource = typeof(Data.MovimientoInventario);
+            // 
+            // movimientoInventarioBindingSource
+            // 
+            movimientoInventarioBindingSource.DataSource = typeof(Data.MovimientoInventario);
+            // 
             // HistorialInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(metroLabel2);
-            Controls.Add(metroLabel1);
-            Controls.Add(filtrarProducto);
-            Controls.Add(hastaTime);
-            Controls.Add(deTime);
             Controls.Add(movimientoGrid);
             Name = "HistorialInventario";
             Text = "Movimiento de Inventario";
             Load += HistorialInventario_Load;
             ((System.ComponentModel.ISupportInitialize)movimientoGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)movimientoInventarioBindingSource).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private MetroFramework.Controls.MetroGrid movimientoGrid;
-        private MetroFramework.Controls.MetroDateTime deTime;
-        private MetroFramework.Controls.MetroDateTime hastaTime;
-        private MetroFramework.Controls.MetroTile filtrarProducto;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private DataGridViewTextBoxColumn articuloDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private BindingSource movimientoInventarioBindingSource;

@@ -26,6 +26,7 @@ namespace FacturaDom.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<DetalleFactura> detalleFacturas { get; set; }
         public DbSet<Movimientos> Movimientos { get; set; }
+        public DbSet<FacturaDetalle>FacturaDetalles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,9 +34,23 @@ namespace FacturaDom.Data
             {
                 optionsBuilder.UseSqlite("Data Source=DBDataContext.db");
             }
+            optionsBuilder.EnableSensitiveDataLogging();
+            optionsBuilder.EnableDetailedErrors();
 
+        }
 
-
+        public static Articulo ToArticulo(articulosTemporales a)
+        {
+            
+            return new Articulo
+            {
+                Nombre = a.Nombre,
+                Codigo = a.Codigo,
+                Descripcion = a.Descripcion,
+                Precio = a.Precio,
+                Stock = a.Stock,
+                TipoMedida = a.TipoMedida
+            };
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -83,6 +98,13 @@ namespace FacturaDom.Data
                     }
                 return (DBDataContext)instance;
             }
+        }
+
+        public static void Reiniciar()
+        {
+            instance = new DBDataContext(new DbContextOptionsBuilder<DBDataContext>()
+            .UseSqlite(ConfigurationManager.ConnectionStrings["DBDataContext"].ConnectionString)
+            .Options);
         }
     }
 }

@@ -45,6 +45,8 @@
             busquedaText = new TextBox();
             elegir_Articulo = new MetroFramework.Controls.MetroTile();
             articuloBindingSource = new BindingSource(components);
+            metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            cantidadDisponible = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)articuloGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)articuloBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)clienteBindingSource).BeginInit();
@@ -193,11 +195,34 @@
             // 
             articuloBindingSource.DataSource = typeof(Modelos.Articulo);
             // 
+            // metroLabel1
+            // 
+            metroLabel1.AutoSize = true;
+            metroLabel1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            metroLabel1.Location = new Point(270, 109);
+            metroLabel1.Name = "metroLabel1";
+            metroLabel1.Size = new Size(134, 19);
+            metroLabel1.TabIndex = 11;
+            metroLabel1.Text = "Cantidad Disponible: ";
+            // 
+            // cantidadDisponible
+            // 
+            cantidadDisponible.AutoSize = true;
+            cantidadDisponible.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cantidadDisponible.FontSize = MetroFramework.MetroLabelSize.Tall;
+            cantidadDisponible.Location = new Point(270, 149);
+            cantidadDisponible.Name = "cantidadDisponible";
+            cantidadDisponible.Size = new Size(19, 25);
+            cantidadDisponible.TabIndex = 12;
+            cantidadDisponible.Text = "-";
+            // 
             // ElegirArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(671, 426);
+            Controls.Add(cantidadDisponible);
+            Controls.Add(metroLabel1);
             Controls.Add(elegir_Articulo);
             Controls.Add(metroLabel3);
             Controls.Add(busquedaText);
@@ -228,5 +253,7 @@
         private DataGridViewTextBoxColumn Stock;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Descripcion;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel cantidadDisponible;
     }
 }

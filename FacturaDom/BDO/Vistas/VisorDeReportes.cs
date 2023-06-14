@@ -28,6 +28,7 @@ namespace FacturaDom.BDO.Vistas
             ReportDataSource rds = new ReportDataSource();
             rds.Name = "PP";
             rds.Value = art.obtenerArticulos();
+            this.Text = "Reporte - Inventario";
             reporteVisor.LocalReport.ReportEmbeddedResource = "FacturaDom.Inventario.rdlc";
             reporteVisor.LocalReport.DataSources.Add(rds);
             reporteVisor.RefreshReport();
